@@ -49,58 +49,6 @@ def _():
     return (mo,)
 
 
-@app.cell
-def _():
-    print("hi")
-    return
-
-
-@app.cell
-def _(freight_charges):
-    freight_charges[0]
-
-    return
-
-
-@app.cell
-def _(freight_charges):
-    (freight_charges)
-
-    return
-
-
-@app.cell
-def _(freight_charges):
-    total=sum(freight_charges)
-    return
-
-
-@app.cell
-def _():
-    x = 50
-    return (x,)
-
-
-@app.cell
-def _(x):
-    s = x + 100
-
-    return (s,)
-
-
-@app.cell
-def _(x):
-    print(x)
-    return
-
-
-@app.cell
-def _(s):
-    print(s)
-
-    return
-
-
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -144,7 +92,7 @@ def _(mo):
 
 @app.cell
 def _():
-    freight_charges = [16.75, 22.25, 25.00, 20.25, 36.25]
+    freight_charges = [999.99, 22.25, 25.00, 20.25, 36.25]
     freight_charges
     return (freight_charges,)
 
@@ -167,6 +115,19 @@ def _(mo):
     *The number in brackets is an **index**, and Python counts from zero, so
     `freight_charges[0]` is the first one.*
     """)
+    return
+
+
+@app.cell
+def _(freight_charges):
+    freight_charges[0]
+    len(freight_charges)
+    total = sum(freight_charges)
+    return (total,)
+
+
+@app.cell
+def _():
     return
 
 
@@ -202,6 +163,12 @@ def _(mo):
     return
 
 
+@app.cell
+def _(freight_charges):
+    freight_charges[0]
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -211,6 +178,11 @@ def _(mo):
 
     Then bring it back: undo, or type the line again.
     """)
+    return
+
+
+@app.cell
+def _():
     return
 
 
@@ -235,6 +207,12 @@ def _(mo):
     `total`.
     """)
     return
+
+
+@app.cell
+def _(freight_charges):
+    total = sum(freight_charges)
+    return (total,)
 
 
 @app.cell(hide_code=True)
@@ -293,6 +271,62 @@ def _(mo):
     return
 
 
+@app.cell
+def _(freight_charges):
+    freight_charges[-1]
+    return
+
+
+@app.cell
+def _(freight_charges):
+    freight_charges[:3]
+    return
+
+
+@app.cell
+def _(freight_charges, orders):
+    orders[0], freight_charges[0]
+    
+    return
+
+
+@app.cell
+def _():
+    category = "Confections"
+    len(category)
+    return
+
+
+@app.cell
+def _(orders):
+    sum(orders)
+    return
+
+
+@app.cell
+def _(orders):
+    orders * 2
+    return
+
+
+@app.cell
+def _(freight_charges, orders):
+    orders + freight_charges
+    return
+
+
+@app.cell
+def _(freight_charges):
+    sorted(freight_charges)
+    return
+
+
+@app.cell
+def _(freight_charges):
+    sorted(freight_charges, reverse=True)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -332,6 +366,19 @@ def _(mo):
     return
 
 
+@app.cell
+def _():
+    "16.75" + "22.25"
+
+    return
+
+
+@app.cell
+def _():
+    16.75 + "22.25"
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -363,6 +410,30 @@ def _(mo):
 
     📖 Handbook: Python §3 Expressions and operators
     """)
+    return
+
+
+@app.cell
+def _(freight_charges):
+    freight_charges[0] > 20
+    return
+
+
+@app.cell
+def _(freight_charges):
+    freight_charges[-1] == max(freight_charges)
+    return
+
+
+@app.cell
+def _(freight_charges):
+    type(freight_charges[0] > 20)
+    return
+
+
+@app.cell
+def _(freight_charges):
+    type(freight_charges[0] >20)
     return
 
 
@@ -401,6 +472,12 @@ def _(mo):
 
     Your sentence should show `$120.50` and `$24.10`.
     """)
+    return
+
+
+@app.cell
+def _(freight_charges, total):
+    print(f"Total freight was ${total:.2f}, with an average charge of ${total / len(freight_charges):.2f}.")
     return
 
 
@@ -454,6 +531,16 @@ def _(mo):
     return
 
 
+@app.cell
+def _(freight_charges):
+    under_25 = []
+    for c in freight_charges:
+        if c <= 25:
+            under_25.append(c)
+    under_25
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -492,6 +579,27 @@ def _(mo):
     return
 
 
+@app.cell
+def _():
+    import pandsa
+
+    return
+
+
+@app.cell
+def _():
+    open("sales.csv")
+    return
+
+
+app._unparsable_cell(
+    r"""
+    new_charges = [16.75, 22.25,
+    """,
+    name="_"
+)
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -501,6 +609,18 @@ def _(mo):
 
     `max(["9.50", "16.75", "22.25"])`
     """)
+    return
+
+
+@app.cell
+def _():
+    max(["9.50", "16.75", "22.25"])
+    return
+
+
+@app.cell
+def _():
+    max([9.50,16.75,22.25])
     return
 
 
@@ -550,6 +670,30 @@ def _(mo):
     return
 
 
+app._unparsable_cell(
+    r"""
+    Line 3 since when you add you see there is an error since a number is pending 
+    """,
+    name="_"
+)
+
+
+app._unparsable_cell(
+    r"""
+    2. Line 1: add the pending number, prior to trying to run the formula and then realizing there is an error
+    """,
+    name="_"
+)
+
+
+app._unparsable_cell(
+    r"""
+    3. Put 0 since the charges have not come in and are "pending" that way it can run line 3 without an error
+    """,
+    name="_"
+)
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -577,6 +721,14 @@ def _(mo):
     The square brackets inside `_ax.bar(...)` are a **list comprehension**, which **iterates** over `orders` and turns each number into text.
     """)
     return
+
+
+app._unparsable_cell(
+    r"""
+    uv add matplotlib
+    """,
+    name="_"
+)
 
 
 @app.cell(hide_code=True)
