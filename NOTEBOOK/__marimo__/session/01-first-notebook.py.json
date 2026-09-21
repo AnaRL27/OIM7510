@@ -19,131 +19,6 @@
       "console": []
     },
     {
-      "id": "HTkK",
-      "code_hash": "aef1670f14ef68ff12a1052445c96172",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "hi\n",
-          "mimetype": "text/plain"
-        }
-      ]
-    },
-    {
-      "id": "prMr",
-      "code_hash": "3606ee41a01c7095542a3115e48cfc17",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/html": "<pre class='text-xs'>16.75</pre>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "vyCi",
-      "code_hash": "979fcab99776308623ac730d908201d9",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "application/json": "[\"text/plain+float:16.75\", \"text/plain+float:22.25\", \"text/plain+float:25.0\", \"text/plain+float:20.25\", \"text/plain+float:36.25\"]"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "Fbot",
-      "code_hash": "7b916ddcf0a5cc445c3f872bf725de14",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "Brpz",
-      "code_hash": "efcf7f1e9dfb8a8cd5ba746a9650abb8",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "bSut",
-      "code_hash": "27b2010472d6f11b62b157681e87c81a",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "SYvf",
-      "code_hash": "ad5a249343db66d92e23b6d38252c4bb",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "50\n",
-          "mimetype": "text/plain"
-        }
-      ]
-    },
-    {
-      "id": "XHry",
-      "code_hash": "d3c410459651e3377c62272ac416094d",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "150\n",
-          "mimetype": "text/plain"
-        }
-      ]
-    },
-    {
       "id": "MJUe",
       "code_hash": "f140325dac078e0ce683a390f306fc98",
       "outputs": [
@@ -184,12 +59,12 @@
     },
     {
       "id": "lEQa",
-      "code_hash": "bb74efdbc983ea90b6751814ad1974a4",
+      "code_hash": "3b6dd02b02484ded56d83c524acd90d8",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "application/json": "[\"text/plain+float:16.75\", \"text/plain+float:22.25\", \"text/plain+float:25.0\", \"text/plain+float:20.25\", \"text/plain+float:36.25\"]"
+            "application/json": "[\"text/plain+float:999.99\", \"text/plain+float:22.25\", \"text/plain+float:25.0\", \"text/plain+float:20.25\", \"text/plain+float:36.25\"]"
           }
         }
       ],
@@ -206,6 +81,25 @@
           }
         }
       ],
+      "console": []
+    },
+    {
+      "id": "JeFi",
+      "code_hash": "6f07992f8162f76a25d441b5b1dc3d71",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'total' was defined by another cell",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZnNB",
+      "code_hash": null,
+      "outputs": [],
       "console": []
     },
     {
@@ -235,6 +129,19 @@
       "console": []
     },
     {
+      "id": "mDLQ",
+      "code_hash": "abd5a46c9b2d6515004aada631c3ff55",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>999.99</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "BYtC",
       "code_hash": "a38d32dbbb47ac81ee857a8e4f587493",
       "outputs": [
@@ -242,6 +149,19 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"experiment-2\">Experiment 2</h2>\n<span class=\"paragraph\">Delete the <code>freight_charges</code> cell. Watch your three cells.</span>\n<span class=\"paragraph\">Then bring it back: undo, or type the line again.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Lsuv",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
           }
         }
       ],
@@ -269,6 +189,19 @@
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"experiment-4\">Experiment 4</h2>\n<span class=\"paragraph\">Drag the cell holding <code>total = sum(freight_charges)</code> <strong>below</strong> the cell that shows\n<code>total</code>.</span></span>"
           }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "agTk",
+      "code_hash": "103deaf77a2537a08bf5a67577bd7f58",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'total' was defined by another cell",
+          "traceback": []
         }
       ],
       "console": []
@@ -320,6 +253,123 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"explore\">\ud83d\ude4b Explore</h1>\n<span class=\"paragraph\">One line per cell. Write down what you expect before you run it. Every one of these\ndepends on the <strong>type</strong> of the thing you hand it.</span>\n<ol>\n<li><code>freight_charges[-1]</code></li>\n<li><code>freight_charges[:3]</code>, which is a <strong>slice</strong></li>\n<li><code>orders[0]</code> and <code>freight_charges[0]</code>. What do those two have in common?</li>\n<li><code>category = \"Confections\"</code>, then <code>len(category)</code>. <code>len</code> counted five things a moment ago. What is it counting now?</li>\n<li><code>sum(orders)</code>. It runs. Should it?</li>\n<li><code>orders * 2</code>, then <code>orders + freight_charges</code>. Neither one is an error.</li>\n<li><code>sorted(freight_charges)</code>, then <code>sorted(freight_charges, reverse=True)</code>. What did <code>reverse=True</code> change, and did <code>freight_charges</code> itself change?</li>\n</ol></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aceF",
+      "code_hash": "c0a7a809473e29effbb39c4685dd71f9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>36.25</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bwat",
+      "code_hash": "20bab0561e08ed42ac58e6591d9ef83f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"text/plain+float:999.99\", \"text/plain+float:22.25\", \"text/plain+float:25.0\"]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lHxu",
+      "code_hash": "fb8974ff0c3b3b23ff263d2616f263c5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[10248, \"text/plain+float:999.99\"]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "QBAM",
+      "code_hash": "e4712679f318d013776735f3aa1a8654",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>11</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vttv",
+      "code_hash": "3185adb3fd9ee53e74b5778d920b025e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>51250</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "LYmA",
+      "code_hash": "fed7e1cc5d674b373c287f10d525a895",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[10248, 10249, 10250, 10251, 10252, 10248, 10249, 10250, 10251, 10252]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "AtyC",
+      "code_hash": "954c6a48329eec4c1e36f2a6e3b81139",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[10248, 10249, 10250, 10251, 10252, \"text/plain+float:999.99\", \"text/plain+float:22.25\", \"text/plain+float:25.0\", \"text/plain+float:20.25\", \"text/plain+float:36.25\"]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "gqmY",
+      "code_hash": "c868ee09c8177da4fbaedcb30ed7efbe",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"text/plain+float:20.25\", \"text/plain+float:22.25\", \"text/plain+float:25.0\", \"text/plain+float:36.25\", \"text/plain+float:999.99\"]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bWZS",
+      "code_hash": "ae7555daaeaad700a408a44157317898",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"text/plain+float:999.99\", \"text/plain+float:36.25\", \"text/plain+float:25.0\", \"text/plain+float:22.25\", \"text/plain+float:20.25\"]"
           }
         }
       ],
@@ -378,6 +428,39 @@
       "console": []
     },
     {
+      "id": "RqwM",
+      "code_hash": "f0686281fad1ef40808d636b1ce1fff1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;16.7522.25&#x27;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ezhl",
+      "code_hash": "670df440749065272ea17293d93060d6",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "unsupported operand type(s) for +: 'float' and 'str'",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">\"/var/folders/5h/syh5zvz56b97qcsfgts8h9lc0000gn/T/marimo_21135/__marimo__cell_ezhl_.py\"</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"mf\">16.75</span> <span class=\"o\">+</span> <span class=\"s2\">\"22.25\"</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~~~^~~~~~~~~</span>\n<span class=\"gr\">TypeError</span>: <span class=\"n\">unsupported operand type(s) for +: 'float' and 'str'</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
       "id": "Vxnm",
       "code_hash": "61c872df0f30ee9fc863188843e1827f",
       "outputs": [
@@ -398,6 +481,58 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"compare-two-charges\">\u270f\ufe0f Compare Two Charges</h1>\n<span class=\"paragraph\">In cells of your own:</span>\n<ol>\n<li>Is the first charge above 20? <code>freight_charges[0] &gt; 20</code></li>\n<li>Is the last charge the largest? <code>freight_charges[-1] == max(freight_charges)</code></li>\n<li>Check the type of either answer with <code>type()</code>.</li>\n</ol>\n<span class=\"paragraph\"><code>==</code> asks whether two values are equal. A single <code>=</code> stores a value.</span>\n<span class=\"paragraph\">\ud83d\udcd6 Handbook: Python \u00a73 Expressions and operators</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bTIf",
+      "code_hash": "1061f64eea1fdc45d218324185d4bc0d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>True</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "OYJN",
+      "code_hash": "fa74ccaf14ae4d37593fa3e3a8b32203",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>False</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ITCi",
+      "code_hash": "8c827640c13f9bce9fc2a9af3489c083",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&lt;class &#x27;bool&#x27;&gt;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "GZRj",
+      "code_hash": "32b1c81660d8b638f64c470089fa587a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&lt;class &#x27;bool&#x27;&gt;</pre>"
           }
         }
       ],
@@ -431,7 +566,7 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Order 10248 paid $16.75 in freight.\n",
+          "text": "Order 10248 paid $999.99 in freight.\n",
           "mimetype": "text/plain"
         }
       ]
@@ -463,6 +598,26 @@
       "console": []
     },
     {
+      "id": "TXMA",
+      "code_hash": "019afedd917c4bd457addaf383f5e59f",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "Name `total` is not defined. It was expected to be defined in ",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">\"/var/folders/5h/syh5zvz56b97qcsfgts8h9lc0000gn/T/marimo_21135/__marimo__cell_TXMA_.py\"</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"nb\">print</span><span class=\"p\">(</span><span class=\"sa\">f</span><span class=\"s2\">\"Total freight was $</span><span class=\"si\">{</span><span class=\"n\">total</span><span class=\"si\">:</span><span class=\"s2\">.2f</span><span class=\"si\">}</span><span class=\"s2\">, with an average charge of $</span><span class=\"si\">{</span><span class=\"n\">total</span><span class=\"w\"> </span><span class=\"o\">/</span><span class=\"w\"> </span><span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">freight_charges</span><span class=\"p\">)</span><span class=\"si\">:</span><span class=\"s2\">.2f</span><span class=\"si\">}</span><span class=\"s2\">.\"</span><span class=\"p\">)</span>\n<span class=\"w\">                                </span><span class=\"pm\">^^^^^</span>\n<span class=\"gr\">NameError</span>: <span class=\"n\">name 'total' is not defined</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
       "id": "aLJB",
       "code_hash": "820c55de11633da2a9d03c20e93517b6",
       "outputs": [
@@ -482,7 +637,7 @@
         {
           "type": "data",
           "data": {
-            "application/json": "[\"text/plain+float:22.25\", \"text/plain+float:25.0\", \"text/plain+float:20.25\", \"text/plain+float:36.25\"]"
+            "application/json": "[\"text/plain+float:999.99\", \"text/plain+float:22.25\", \"text/plain+float:25.0\", \"text/plain+float:20.25\", \"text/plain+float:36.25\"]"
           }
         }
       ],
@@ -515,6 +670,19 @@
       "console": []
     },
     {
+      "id": "Ffov",
+      "code_hash": "59566baf427ddedeac8d1dfa1e2b120a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"text/plain+float:22.25\", \"text/plain+float:25.0\", \"text/plain+float:20.25\"]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "pHFh",
       "code_hash": "3c0f55b2f8582e207416da282626db3d",
       "outputs": [
@@ -541,6 +709,59 @@
       "console": []
     },
     {
+      "id": "uypM",
+      "code_hash": "fee9f277be8055a99c264f94180158e3",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "No module named 'pandsa'",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">\"/var/folders/5h/syh5zvz56b97qcsfgts8h9lc0000gn/T/marimo_21135/__marimo__cell_uypM_.py\"</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">import</span><span class=\"w\"> </span><span class=\"nn\">pandsa</span>\n<span class=\"gr\">ModuleNotFoundError</span>: <span class=\"n\">No module named 'pandsa'</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "zxfV",
+      "code_hash": "45003b88d4e0e33f63bf2b637d883f59",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "[Errno 2] No such file or directory: 'sales.csv'",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">\"/var/folders/5h/syh5zvz56b97qcsfgts8h9lc0000gn/T/marimo_21135/__marimo__cell_zxfV_.py\"</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"nb\">open</span><span class=\"p\">(</span><span class=\"s2\">\"sales.csv\"</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~^^^^^^^^^^^^^</span>\n<span class=\"gr\">FileNotFoundError</span>: <span class=\"n\">[Errno 2] No such file or directory: 'sales.csv'</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "Toie",
+      "code_hash": "994c61da2d2a58513b182334713b069a",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "syntax",
+          "evalue": "line 1\n    new_charges = [16.75, 22.25,\n                  ^\nSyntaxError: '[' was never closed\n",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "aqbW",
       "code_hash": "830409d9361fd16a4b5b79956f3dae62",
       "outputs": [
@@ -548,6 +769,32 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"a-line-that-does-not-break\">\ud83d\ude4b A Line That Does Not Break</h1>\n<span class=\"paragraph\">Write down what this gives, then run it in a cell of your own.</span>\n<span class=\"paragraph\"><code>max([\"9.50\", \"16.75\", \"22.25\"])</code></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aUJD",
+      "code_hash": "3ecb5a15eac460ce6adc166848ad8c47",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;9.50&#x27;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PsNK",
+      "code_hash": "47eb738abcf45b9d5123450eb642488b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>22.25</pre>"
           }
         }
       ],
@@ -580,6 +827,24 @@
       "console": []
     },
     {
+      "id": "ITPk",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PfLf",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ZROa",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
       "id": "dNNg",
       "code_hash": "220c060dad06108b309d7d0e848cd4d6",
       "outputs": [
@@ -588,6 +853,19 @@
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"the-list-as-a-bar-chart\">\u25b6\ufe0f The List as a Bar Chart</h1>\n<blockquote>\n<span class=\"paragraph\"><strong>Advanced.</strong> Nothing later depends on this.</span>\n</blockquote>\n<span class=\"paragraph\">A chart needs <strong>matplotlib</strong>, which your project does not have yet. Add it in VS Code's Terminal:</span>\n<div class=\"language-text codehilite\"><pre><span></span><code>uv add matplotlib\n</code></pre></div>\n<span class=\"paragraph\">Then paste this into a new cell. Change a number in <code>freight_charges</code> and the bars move on their own.</span>\n<div class=\"language-python codehilite\"><pre><span></span><code><span class=\"kn\">import</span><span class=\"w\"> </span><span class=\"nn\">matplotlib.pyplot</span><span class=\"w\"> </span><span class=\"k\">as</span><span class=\"w\"> </span><span class=\"nn\">plt</span>\n\n<span class=\"n\">_fig</span><span class=\"p\">,</span> <span class=\"n\">_ax</span> <span class=\"o\">=</span> <span class=\"n\">plt</span><span class=\"o\">.</span><span class=\"n\">subplots</span><span class=\"p\">(</span><span class=\"n\">figsize</span><span class=\"o\">=</span><span class=\"p\">(</span><span class=\"mi\">6</span><span class=\"p\">,</span> <span class=\"mf\">2.6</span><span class=\"p\">))</span>\n<span class=\"n\">_ax</span><span class=\"o\">.</span><span class=\"n\">bar</span><span class=\"p\">([</span><span class=\"nb\">str</span><span class=\"p\">(</span><span class=\"n\">_o</span><span class=\"p\">)</span> <span class=\"k\">for</span> <span class=\"n\">_o</span> <span class=\"ow\">in</span> <span class=\"n\">orders</span><span class=\"p\">],</span> <span class=\"n\">freight_charges</span><span class=\"p\">)</span>\n<span class=\"n\">_ax</span><span class=\"o\">.</span><span class=\"n\">set_ylabel</span><span class=\"p\">(</span><span class=\"s2\">\"freight\"</span><span class=\"p\">)</span>\n<span class=\"n\">_fig</span>\n</code></pre></div>\n<span class=\"paragraph\">The square brackets inside <code>_ax.bar(...)</code> are a <strong>list comprehension</strong>, which <strong>iterates</strong> over <code>orders</code> and turns each number into text.</span></span>"
           }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "sBIt",
+      "code_hash": "0dc219a84858e2bce6330532fd768a89",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "syntax",
+          "evalue": "line 1\n    uv add matplotlib\n       ^^^\nSyntaxError: invalid syntax. Did you mean 'and'?\n",
+          "traceback": []
         }
       ],
       "console": []
