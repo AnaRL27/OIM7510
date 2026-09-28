@@ -314,6 +314,11 @@ def _(mo):
     return
 
 
+@app.cell
+def _():
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -534,6 +539,13 @@ def _():
     return
 
 
+@app.cell
+def _():
+    print("100.5" + "50")
+    print(100 + 50)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -682,6 +694,35 @@ def _(orders):
     return
 
 
+@app.cell
+def _(orders):
+    total_freight = 0
+    for o in orders:
+        total_freight = total_freight + o["Freight"]
+    total_freight
+    return
+
+
+@app.cell
+def _(orders):
+    unshipped_count = 0
+    for od in orders:
+        if od["ShippedDate"] is None:
+            unshipped_count = unshipped_count + 1
+    unshipped_count
+    return
+
+
+@app.cell
+def _(orders):
+    biggest_order = orders[0]
+    for ordr in orders:
+        if ordr["Freight"] > biggest_order["Freight"]:
+            biggest_order = ordr
+    biggest_order["OrderID"], biggest_order["Freight"]
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -704,6 +745,24 @@ def _(mo):
     return
 
 
+@app.cell
+def _(orders):
+    unshipped_orders = []
+    for rec in orders:
+        if rec["ShippedDate"] is None:
+            unshipped_orders.append(rec)
+    unshipped_orders
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    the three orders with no ship date were all ordered in April 2018
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -717,6 +776,14 @@ def _(mo):
 
     Then check it: if a row were what you just wrote, **how many rows would this table
     have?** Does that match 30?
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    One row is a single horizontal line of data from a single record (in the case above: details from one shipping transaction)
     """)
     return
 
@@ -754,6 +821,14 @@ def _(mo):
     return
 
 
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    For each holding, multiply shares times price and then sum all of the values up
+    """)
+    return
+
+
 @app.cell
 def _():
     portfolio = [
@@ -765,6 +840,56 @@ def _():
         {"Symbol": "TSLA", "Shares": 150, "Price": 255.70},
     ]
     portfolio
+    return (portfolio,)
+
+
+@app.cell
+def _(portfolio):
+    portfolio_value = 0
+    for holding in portfolio:
+        portfolio_value = portfolio_value + holding["Shares"] * holding["Price"]
+    portfolio_value
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    ## ✏️ Practice: Inventory Value
+
+    A small shop's inventory is listed below, one record per product. Each product has
+    a `"Quantity"` on hand and a `"UnitPrice"`.
+
+    **Your turn:** write the code that calculates the **total value of the inventory** —
+    that is, quantity times unit price, added up across every product.
+
+    Use the same pattern as the portfolio example: start a running total at 0, loop
+    through each product, multiply the two fields, and add the result to your total.
+
+    **Check yourself: $2,142.50**
+    """)
+    return
+
+
+@app.cell
+def _():
+    inventory = [
+        {"Product": "Notebook", "Quantity": 50, "UnitPrice": 3.50},
+        {"Product": "Pen", "Quantity": 200, "UnitPrice": 1.25},
+        {"Product": "Stapler", "Quantity": 30, "UnitPrice": 8.00},
+        {"Product": "Folder", "Quantity": 100, "UnitPrice": 2.00},
+        {"Product": "Tape", "Quantity": 75, "UnitPrice": 3.00},
+    ]
+    inventory
+    return (inventory,)
+
+
+@app.cell
+def _(inventory):
+    inventory_value = 0
+    for item in inventory:
+        inventory_value = inventory_value + item["Quantity"] * item["UnitPrice"]
+    inventory_value
     return
 
 
