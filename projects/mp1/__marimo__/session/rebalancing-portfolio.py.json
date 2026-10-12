@@ -1,0 +1,392 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.24.2",
+    "script_metadata_hash": "da873d5d09e69dbc37de3cbfd95dec06"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "9804517b8efe0048be5c04d263c3ffa2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"mini-project-1\">Mini Project 1</h1>\n<span class=\"paragraph\">Your choice of project, what each one asks for, the due date and how it is graded are on the Mini Project 1 page of the course site, linked from the calendar. This notebook is the shape to build it in. Keep the headings, and replace each line in italics with your own.</span>\n<span class=\"paragraph\">Save it in your course repository as <code>projects/mp1/&lt;your-tool&gt;.py</code>, named for what it does, such as <code>loan-schedule.py</code>, and open it with <code>uv run marimo edit</code>.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "341b470af643068ae6fa175257567582",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"1-the-question\">1. The Question</h2>\n<span class=\"paragraph\"><em>Who would use this, and what decision does it help them make? Two or three sentences, in words somebody outside this course would understand.</em></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MkHf",
+      "code_hash": "9e12bc5717f0edbadae7dc742b475124",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Target users could include day traders, retail investors,investment fund managers and generally anyone who invests in the stock market. The ability to balance a portfolio allows these users to allocate resources according to a set of goals/ investment criteria.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "f5e3e0e704045272fd881089e5d00c3d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"2-my-plan-before-ai\">2. My Plan Before AI</h2>\n<span class=\"paragraph\"><em>Before you ask your agent anything, write how you would solve it: the steps, in order, in plain words, in five lines or more. Then answer these two questions:</em></span>\n<ul>\n<li><em>What does your loop carry from one step to the next, the way a running total carries its sum?</em></li>\n<li><em>Which check will you use in section 6, and which two numbers should agree?</em></li>\n</ul>\n<span class=\"paragraph\"><em>Commit this notebook with the message <code>mp1: plan before AI</code>.</em></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PpgN",
+      "code_hash": "6270dd8127a9ec6b225cc2e21b965b96",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Step 1:  Find the market value of each holding by multipying price times number of shares\nStep 2: Add up all of those values to know what the value of your holdings is\nStep 3: Add 5,000 in cash to the total value of your holdings to get the total portfolio value\nStep 4: Multiply portfolio value times the target weights to get the target value of each holding\nStep 5: Find out how many sahres you need to own in order to have the target portfolio by dividing the market value by the price</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "WwCQ",
+      "code_hash": "2ad6bd521f0da01651d25837468d0a89",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Question 1: The loop carries the cash balance of $5,000 and it updates based the stocks peformance</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "UVNv",
+      "code_hash": "d62a69a6736162e2f5f6559579c39d21",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Question 2: Sum of holdings should be equal to portfolio minus your cash. Your weights should always equal 100 and cash is greater than or equal to 0</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "20f0e7f2f4fdae13652d41330c39ad42",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"3-inputs\">3. Inputs</h2>\n<span class=\"paragraph\">Every number the project starts from goes in the cell below, and nowhere else, so that changing one input changes every result after it.</span>\n<span class=\"paragraph\">Copy in the default inputs for your project from the Mini Project 1 page. If you chose your own project, type your data in here, or ask your agent to generate it with <code>faker</code>. The required part reads no file.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "CwCh",
+      "code_hash": "93b2612372065400269db35b8278f689",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">holdings = [\n    (\"AAPL\", 100, 173.93),\n    (\"MSFT\", 50, 319.53),\n    (\"GOOG\", 80, 131.36),\n    (\"AMZN\", 200, 129.33),\n    (\"NVDA\", 20, 410.17),\n    (\"TSLA\", 150, 255.70),\n]\ncash = 5000.00\ntarget_weights = {\"AAPL\": 0.20, \"MSFT\": 0.20, \"GOOG\": 0.15,\n                  \"AMZN\": 0.15, \"NVDA\": 0.15, \"TSLA\": 0.15}</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "71d32bd63e1b86444a83f18329c3c3f8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"4-the-work\">4. The Work</h2>\n<span class=\"paragraph\">Add as many cells as you need. Try each step yourself before you ask your agent, and commit as you go.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ERWD",
+      "code_hash": "106ae057eca4a3a1ccc876d48b5e8b81",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "wbXs",
+      "code_hash": "9a90306a58e0c6f1d668ad16ae9f6c01",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Qoqv",
+      "code_hash": "6237aaec15b95b1782f8b85b97bdb882",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "3aa431da05430ca027f8ac6af1a4ff7e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>121302.7</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "dihl",
+      "code_hash": "1ff84f2d55519c31d55e868506a5f62d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[139, 75, 138, 140, 44, 71], [39, 25, 58, -60, 24, -79]]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "rLlN",
+      "code_hash": "88e32680ba5c90df32bd46664070e84e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>725.619999999999</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xgKA",
+      "code_hash": "5d73e08c65889a419d79aad12a534266",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[\"text/plain+float:24176.27\", \"text/plain+float:23964.749999999996\", \"text/plain+float:18127.68\", \"text/plain+float:18106.2\", \"text/plain+float:18047.48\", \"text/plain+float:18154.7\"], [\"text/plain+float:0.19930529163819108\", \"text/plain+float:0.1975615546892196\", \"text/plain+float:0.14944168596412116\", \"text/plain+float:0.14926460828984023\", \"text/plain+float:0.14878053002942226\", \"text/plain+float:0.14966443450970177\"], [\"text/plain+float:0.06947083618089323\", \"text/plain+float:0.24384453107804127\", \"text/plain+float:0.05583140358788319\", \"text/plain+float:0.07353917101597662\", \"text/plain+float:0.12194699705777301\", \"text/plain+float:0.03355654902982286\"]]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "189948d98f771b65614d9dc06a5a3ea6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"5-the-answer\">5. The Answer</h2>\n<span class=\"paragraph\"><em>A table of your results in the cell below, printed with <code>print</code> and f-strings, then one sentence here that answers the question in section 1, with the number in it.</em></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "3cef5a91182983d341cbfdd504fc9161",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Ticker    Shares Now  Shares Target   Shares to Trade    Value After   Weight After   Gap (pts)\nAAPL             100            139                39      24,176.27         19.93%       0.07\nMSFT              50             75                25      23,964.75         19.76%       0.24\nGOOG              80            138                58      18,127.68         14.94%       0.06\nAMZN             200            140               -60      18,106.20         14.93%       0.07\nNVDA              20             44                24      18,047.48         14.88%       0.12\nTSLA             150             71               -79      18,154.70         14.97%       0.03\n\nCash left after trades: $725.62\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "cefd9fb4105f4ca556cfc0dc69895e7a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"6-how-i-know-these-numbers-are-right\">6. How I Know These Numbers Are Right</h2>\n<span class=\"paragraph\"><em>At least one check that reaches a result a second, independent way. Name what you compared and what came out.</em></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "2118d77132da351e383dcc830e7dc31d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Sum of holdings should be equal to portfolio minus your cash (holdings = 116,302, Portfolio = 121,302 and Cash = 5,000. Therefore 121,302 -5,000 = 116,302). Your weights should always equal 100 and cash is greater than or equal to 0. </span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "4fa513d08c761dfe89641eaef1357bc2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"7-working-with-the-agent\">7. Working With the Agent</h2>\n<span class=\"paragraph\"><em>Pick one piece of AI output you did not accept as-is. What did it give you, what did you change, and how did you know? Point to the commit or the cell.</em></span>\n<span class=\"paragraph\"><em>If the agent got it right the first time: what did you do to verify that?</em></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "mGHH",
+      "code_hash": "44c36ae1ce8a7fa8830c65e729ac8f74",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Initially, the code the agent created did not work because I had not defined holdings, cash and target weights separately. Once I did, the code worked and I checked the final result of 121,302 by following the five steps defined in Section 2 and doing it in excel. Additionally, I also had to ask the agent to complete the final steps of dividing target value with price and also made sure it was correct in excel. </span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "9e11622311558f577bd7fefb4cd2c3ec",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"8-going-further\">8. Going Further</h2>\n<span class=\"paragraph\"><em>Take at least one step past the main task, in any direction, and use your agent as much as you like. It does not have to work. State what you tried, what you found, and where it is in this notebook.</em></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Uodb",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "iQGZ",
+      "code_hash": "4baf9779510a5d655c03efbddf12d1cb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">For Going Further, I installed yahoo finance in UV and then worked with my agent to make sure the holdings in section 3 could be updated in real time based on yahoo finance vs manual inputs. </span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aJlY",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "YoUY",
+      "code_hash": "525de4babf26d52bf054fe70cba7f281",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Afwi",
+      "code_hash": "2395d0290de6e934981c23654feecba8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[\"AAPL\", 100, \"text/plain+float:336.6400146484375\"], [\"MSFT\", 50, \"text/plain+float:535.0700073242188\"], [\"GOOG\", 80, \"text/plain+float:347.8599853515625\"], [\"AMZN\", 200, \"text/plain+float:262.42999267578125\"], [\"NVDA\", 20, \"text/plain+float:229.27999877929688\"], [\"TSLA\", 150, \"text/plain+float:382.70001220703125\"]]"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

@@ -328,13 +328,13 @@ def _(mo):
     it, write under the letter, and press `Ctrl+Enter`. Code still goes in cells of your
     own, added with the **+** button.
 
-    **A ·**
+    **A ·** I am learning how to code with AI
 
-    **C ·**
+    **C ·** Learning is fun!
 
-    **D ·**
+    **D ·** Hello, world!
 
-    **E ·**
+    **E ·** We recently learned about errors and functions
     """)
     return
 
@@ -674,7 +674,7 @@ def _():
     {"OrderID": 11019, "CustomerID": "RANCH", "ShipCountry": "Argentina", "ShipCity": "Buenos Aires", "OrderDate": "2018-04-13", "ShippedDate": None, "Freight": 11.25},
     {"OrderID": 11039, "CustomerID": "LINOD", "ShipCountry": "Venezuela", "ShipCity": "I. de Margarita", "OrderDate": "2018-04-21", "ShippedDate": None, "Freight": 43.00},
     ]
-    len(orders)
+    len(orders), type(orders), type(orders[0])
     return (orders,)
 
 
