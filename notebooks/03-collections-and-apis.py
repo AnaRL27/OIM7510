@@ -157,13 +157,15 @@ def _(mo):
 
     Several questions below ask for a sentence. This cell is where they go. Click into it, write under the letter, and press `Ctrl+Enter` (Windows) or `Cmd+Enter` (macOS).
 
-    **B ·** LIST since it can change by adding, removing or reordering
+    **B ·** France had the most orders, with 4.
 
-    **C ·** SET since you just need to know who ordered and not the extra details
+    **C ·**
+    1. LIST since it can change by adding, removing or reordering
+    2. SET since you just need to know who ordered and not the extra details
+    3. DICTIONARY since you are looking a product up and do not need to worry about position
+    4. TUPLE since it does not change once recorded
 
-    **D ·** DICTIONARY since you are looking a product up and do not need to worry about position
-
-    **G ·** TUPLE since it does not change once recorded
+    **G ·** The first result is in Florida, not Massachusetts. Code that always takes `[0]` would have silently returned the wrong Babson Park — the Florida one — with no error at all, because the API still returned a valid, non-empty result. This shows that a successful reply does not guarantee it is the *correct* one.
     """)
     return
 
@@ -214,9 +216,9 @@ def _():
 @app.cell
 def _(closing_prices):
     above_200 = []
-    for ticker, price in closing_prices.items():
-        if price > 200:
-            above_200.append(ticker)
+    for _ticker, _price in closing_prices.items():
+        if _price > 200:
+            above_200.append(_ticker)
     above_200
     return
 
@@ -225,10 +227,10 @@ def _(closing_prices):
 def _(closing_prices):
     highest_ticker = None
     highest_price = 0
-    for ticker, price in closing_prices.items():
-        if price > highest_price:
-            highest_price = price
-            highest_ticker = ticker
+    for _ticker, _price in closing_prices.items():
+        if _price > highest_price:
+            highest_price = _price
+            highest_ticker = _ticker
     highest_ticker
     return
 
@@ -763,11 +765,42 @@ def _(mo):
     return
 
 
+@app.cell
+def _(babson_weather):
+    wind_speed = babson_weather["current"]["wind_speed_10m"]
+    wind_unit = babson_weather["current_units"]["wind_speed_10m"]
+    f"The wind speed is {wind_speed} {wind_unit}."
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     **F · Another town.** Search for `Wellesley` the way the misspelled search did, with the correct spelling. Take the first place out of `results`, then its `latitude`, `longitude` and `admin1`. *Check yourself: latitude 42.29649, in Massachusetts.*
     """)
+    return
+
+
+@app.cell
+def _(requests):
+    wellesley_reply = requests.get(
+        "https://geocoding-api.open-meteo.com/v1/search?name=Wellesley&count=1",
+        timeout=10,
+    )
+    wellesley_reply.status_code, wellesley_reply.json()
+    return (wellesley_reply,)
+
+
+@app.cell
+def _(wellesley_reply):
+    wellesley_place = wellesley_reply.json()["results"][0]
+    wellesley_place
+    return (wellesley_place,)
+
+
+@app.cell
+def _(wellesley_place):
+    wellesley_place["latitude"], wellesley_place["longitude"], wellesley_place["admin1"]
     return
 
 
@@ -778,6 +811,27 @@ def _(mo):
 
     **Going further.** Use F's coordinates to ask for Wellesley's current temperature. Build the address with an f-string, so that changing the town changes the forecast.
     """)
+    return
+
+
+@app.cell
+def _(requests):
+    babson_park_reply = requests.get(
+        "https://geocoding-api.open-meteo.com/v1/search?name=Babson Park&count=1",
+        timeout=10,
+    )
+    babson_park_place = babson_park_reply.json()["results"][0]
+    babson_park_place
+    return
+
+
+@app.cell
+def _(requests):
+    babson_park_all = requests.get(
+        "https://geocoding-api.open-meteo.com/v1/search?name=Babson Park&count=10",
+        timeout=10,
+    )
+    babson_park_all.json()["results"]
     return
 
 
