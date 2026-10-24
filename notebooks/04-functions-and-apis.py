@@ -66,16 +66,13 @@ def _(mo):
     return
 
 
+@app.function
+def add_tax(amount):
+    return round(amount * 1.0625, 2)
+
+
 @app.cell
 def _():
-    def add_tax(amount):
-        return round(amount * 1.0625, 2)
-
-    return (add_tax,)
-
-
-@app.cell
-def _(add_tax):
     add_tax(100)
     return
 
@@ -110,19 +107,16 @@ def _(mo):
     return
 
 
-@app.cell
-def _():
-    def compute_cost(portfolio):
-        cost_so_far = 0
-        for symbol, shares, price in portfolio:
-            cost_so_far = cost_so_far + shares * price
-        return round(cost_so_far, 2)
-
-    return (compute_cost,)
+@app.function
+def compute_cost(portfolio):
+    cost_so_far = 0
+    for symbol, shares, price in portfolio:
+        cost_so_far = cost_so_far + shares * price
+    return round(cost_so_far, 2)
 
 
 @app.cell
-def _(holdings, compute_cost):
+def _(holdings):
     compute_cost(holdings)
     return
 
@@ -147,7 +141,7 @@ def _():
 
 
 @app.cell
-def _(compute_cost, retirement_holdings):
+def _(retirement_holdings):
     compute_cost(retirement_holdings)
     return
 
@@ -177,12 +171,67 @@ def _(mo):
     return
 
 
+@app.function
+def count_shares(portfolio):
+    total_shares = 0
+    for symbol, shares, price in portfolio:
+        total_shares = total_shares + shares
+    return total_shares
+
+
+@app.cell
+def _(holdings, retirement_holdings):
+    count_shares(holdings), count_shares(retirement_holdings)
+    return
+
+
+@app.function
+def find_largest(portfolio):
+    largest_symbol = None
+    largest_cost = 0
+    for symbol, shares, price in portfolio:
+        cost = shares * price
+        if cost > largest_cost:
+            largest_cost = cost
+            largest_symbol = symbol
+    return largest_symbol, largest_cost
+
+
+@app.cell
+def _(holdings, retirement_holdings):
+    find_largest(holdings), find_largest(retirement_holdings)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     ## ✏️ B · Without `return`
 
     Copy `count_shares` into a new cell under a new name, and put `print(...)` where the `return` was. Call it and keep the result in a name. In a markdown cell under it, answer: what does that name hold, and what could the next cell do with it?
+    """)
+    return
+
+
+@app.function
+def count_shares2(portfolio):
+    total_shares = 0
+    for symbol, shares, price in portfolio:
+        total_shares = total_shares + shares
+    print(total_shares)
+
+
+@app.cell
+def _(holdings):
+    result = count_shares2(holdings)
+    result
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    `result` holds `None`, not `600`. The function printed `600` to the screen, but since it has no `return` line, Python automatically hands back `None` to whatever called it. The next cell could not use `result` for any further math (like `result * 2`), because there is no real number stored in it — only `None`.
     """)
     return
 
@@ -318,6 +367,18 @@ def _(mo):
     return
 
 
+@app.cell
+def _(requests):
+    top_income_reply = requests.get(
+        "https://oim.zhili.dev/ma/towns",
+        params={"county": "Norfolk", "sort": "income", "order": "desc", "per_page": 5},
+        timeout=10,
+    )
+    top_income_towns = top_income_reply.json()
+    [town["name"] for town in top_income_towns["items"]]
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -332,6 +393,37 @@ def _(mo):
     **Going further.** Write `town_history(name)`, which takes a town's name, makes both requests, and returns the history.
     """)
     return
+
+
+@app.cell
+def _(requests, wellesley_town):
+    wellesley_history_reply = requests.get(
+        f"https://oim.zhili.dev/ma/towns/{wellesley_town['dor_code']}/history",
+        params={"from_year": 2026, "to_year": 2026},
+        timeout=10,
+    )
+    wellesley_history = wellesley_history_reply.json()
+    wellesley_history
+    return (wellesley_history,)
+
+
+@app.cell
+def _(wellesley_history):
+    wellesley_year = wellesley_history["years"][0]
+    wellesley_year["average_single_family_value_dollars"] * wellesley_year["residential_rate_per_thousand"] / 1000
+    return
+
+
+@app.cell
+def _(requests):
+    wellesley_reply = requests.get(
+        "https://oim.zhili.dev/ma/towns",
+        params={"name": "Wellesley"},
+        timeout=10,
+    )
+    wellesley_town = wellesley_reply.json()["items"][0]
+    wellesley_town["dor_code"]
+    return (wellesley_town,)
 
 
 @app.cell(hide_code=True)
@@ -415,6 +507,27 @@ def _(mo):
     return
 
 
+@app.cell
+def _(get_page):
+    def get_all_towns():
+        first_page = get_page(1)
+        all_towns = first_page["items"]
+        total_pages = first_page["pagination"]["pages"]
+        for p in range(2, total_pages + 1):
+            next_page = get_page(p)
+            all_towns = all_towns + next_page["items"]
+        return all_towns
+
+    return (get_all_towns,)
+
+
+@app.cell
+def _(get_all_towns):
+    all_towns = get_all_towns()
+    len(all_towns), all_towns[0]["name"], all_towns[-1]["name"]
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -460,6 +573,37 @@ def _(mo):
     3. Delete the `headers=` line and run it again. In a markdown cell under it, answer: what did the server answer, and why does it need to know who sent a message?
 
     **Going further.** Post something more useful than one town's bill: choose a question somebody would ask, answer it from live data, and post the answer, in 140 characters or fewer.
+    """)
+    return
+
+
+@app.cell
+def _(requests):
+    board_reply = requests.post(
+        "https://oim.zhili.dev/message",
+        headers={"x-token": "AnaRL27"},
+        json={"message": "Hello from Ana"},
+        timeout=10,
+    )
+    board_reply.status_code, board_reply.json()
+    return
+
+
+@app.cell
+def _(requests):
+    no_header_reply = requests.post(
+        "https://oim.zhili.dev/message",
+        json={"message": "Hello from Ana"},
+        timeout=10,
+    )
+    no_header_reply.status_code, no_header_reply.json()
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    Without the `x-token` header, the server answered **401** with `{"detail": "Missing x-token header"}` — it refused the request outright, rather than posting an anonymous message. The server needs to know who sent a message so it can show the right name on the board next to each line, and so it can tell who to credit (or blame) for what gets posted — without a header, it has no way to attach a message to a person.
     """)
     return
 
