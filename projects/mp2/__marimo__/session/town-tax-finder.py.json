@@ -1,0 +1,362 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.24.2",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "8474f74b034fc7eb408b345ee9436160",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"1-the-question\">1. The Question</h2>\n<span class=\"paragraph\">The people who would use this are planning on buying a home in Middlesex of around $700,000 who want to keep their property tax bill under $8,000. What do their options look like (short list of towns) to determine feasibility and whether it makes sense to pivot.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "mRmU",
+      "code_hash": "7450938f17eb6830cf40662a617c33c1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"2-my-plan-before-ai\">2. My Plan Before AI</h2>\n<span class=\"paragraph\">Part A:</span>\n<div class=\"language-teratermmacro highlight\"><pre><span></span><code><span class=\"w\">    </span><span class=\"mi\">1</span>.<span class=\"w\"> </span><span class=\"nv\">List</span><span class=\"w\"> </span><span class=\"nv\">every</span><span class=\"w\"> </span><span class=\"nv\">town</span><span class=\"w\"> </span><span class=\"nv\">in</span><span class=\"w\"> </span><span class=\"nv\">the</span><span class=\"w\"> </span><span class=\"nv\">county</span><span class=\"w\"> </span><span class=\"ss\">(</span><span class=\"nv\">will</span><span class=\"w\"> </span><span class=\"nv\">check</span><span class=\"w\"> </span><span class=\"nv\">pagination</span><span class=\"w\"> </span><span class=\"nv\">to</span><span class=\"w\"> </span><span class=\"nv\">confirm</span><span class=\"w\"> </span><span class=\"nv\">I</span><span class=\"w\"> </span><span class=\"nv\">collected</span><span class=\"w\"> </span><span class=\"nv\">all</span><span class=\"w\"> </span><span class=\"nv\">of</span><span class=\"w\"> </span><span class=\"nv\">them</span><span class=\"ss\">)</span>\n\n<span class=\"w\">    </span><span class=\"mi\">2</span>.<span class=\"w\"> </span><span class=\"nv\">Fiscal</span><span class=\"w\"> </span><span class=\"nv\">year</span><span class=\"w\"> </span><span class=\"mi\">2026</span><span class=\"w\"> </span><span class=\"nv\">history</span><span class=\"w\"> </span><span class=\"k\">for</span><span class=\"w\"> </span><span class=\"nv\">each</span><span class=\"w\"> </span><span class=\"nv\">town</span>.<span class=\"w\"> </span><span class=\"nv\">Figures</span><span class=\"w\"> </span><span class=\"nv\">needed</span><span class=\"w\"> </span><span class=\"k\">for</span><span class=\"w\"> </span><span class=\"nv\">each</span><span class=\"w\"> </span><span class=\"nv\">town</span><span class=\"err\">'s history: average home value, residential tax rate and average bill.</span>\n\n<span class=\"err\">    3. Is the town\u2019s average home value within their budget? And Is the town\u2019s average bill within their tax limit?</span>\n\n<span class=\"err\">    4. Average bill lowest to highest</span>\n\n<span class=\"err\">    5. Table containing every town in Middlesex where the price and property tax meet their budget. Columns: town, average home value, residential tax rate, average bill.</span>\n</code></pre></div>\n<span class=\"paragraph\">Part B:</span>\n<div class=\"language-scdoc highlight\"><pre><span></span><code>    1. get_towns(county) \u2192 in: county name, out: list of town records &amp; get_town_history(dor_code, year) \u2192 in: dor_code + fiscal year, out: that town's history record\n\n    2. /ma/towns &amp; /ma/towns/{dor_code}/history\n\n    3. Pagination: comparing total and pages\n\n4. The average home value times the tax rate divided by 1,000 should come out close to the average bill. Tax rates are quoted per $1,000 of value.\n</code></pre></div></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "wJFO",
+      "code_hash": "e51470c0a2cf1242091a7f3b8b7a4df0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"3-inputs\">3. Inputs</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lRCJ",
+      "code_hash": "07dc02cefad834508ed06b2f226b33d7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Cflb",
+      "code_hash": "3762dd78c77e940fb018b87dd4fd5b93",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"4-the-work\">4. The Work</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "UEkS",
+      "code_hash": "e64d449e7f0b280cff743d00d8a08091",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Dshn",
+      "code_hash": "06b671f3b14d273749587fce01193aa5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "GHlv",
+      "code_hash": "e0caf7af9dd4644b508c5f2cf0bc91f6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"5-the-answer\">5. The Answer</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xIqQ",
+      "code_hash": "62cd11ce5c2ff9589e5fcf8e3763002d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Town             Average Value    Tax Rate   Average Bill\nMalden                 434,420        11.4          4,952\nWaltham                502,825       10.32          5,189\nDracut                 593,296        9.67          5,737\nLowell                 514,854       11.35          5,844\nEverett                466,504       12.62          5,887\nAshby                  394,983       15.76          6,225\nMarlborough            611,100       10.54          6,441\nTownsend               469,723       13.75          6,459\nShirley                523,807       12.39          6,490\nAyer                   571,644       11.59          6,625\nBillerica              644,586       11.61          7,484\nPepperell              549,948       13.78          7,578\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "zzYV",
+      "code_hash": "e2a037352e6dc2aef89b27d474ffb468",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "In Middlesex County, 12 towns have an average home under $700,000 and an average tax bill under $8,000, with Malden the cheapest at $4,952 a year on a $434,420 average home.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Xjvi",
+      "code_hash": "01c6dbced0668dee01fa9d824ba0ba8f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"6-how-i-know-these-numbers-are-right\">6. How I know these numbers are right</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Cnkv",
+      "code_hash": "fb2007ec43594471119b038773e3b512",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Town             Average Value  Tax Rate   Calculated Bill   Reported Bill   Difference\nMalden                 434,420      11.4             4,952           4,952           -0\nWaltham                502,825     10.32             5,189           5,189           -0\nDracut                 593,296      9.67             5,737           5,737           -0\nLowell                 514,854     11.35             5,844           5,844            0\nEverett                466,504     12.62             5,887           5,887           -0\nAshby                  394,983     15.76             6,225           6,225            0\nMarlborough            611,100     10.54             6,441           6,441            0\nTownsend               469,723     13.75             6,459           6,459            0\nShirley                523,807     12.39             6,490           6,490            0\nAyer                   571,644     11.59             6,625           6,625           -0\nBillerica              644,586     11.61             7,484           7,484            0\nPepperell              549,948     13.78             7,578           7,578           -0\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "kjEu",
+      "code_hash": "1caf6f8631b13b96e9c59a97c1e12e86",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"7-working-with-the-agent\">7. Working With the Agent</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "KMvB",
+      "code_hash": "bf96bebdf103dc48793b90bf4a9e3364",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">The only section where I changed the agent's output was section 6 when we were checking the results. The output of the formula I wanted to use to verify was: The average home value times the tax rate divided by 1,000 should come out close to the average bill. Tax rates are quoted per $1,000 of value. However, when the code resulted in just the columns calulcated bill and reported bill and then the difference, I asked the agent to also include the average value and tax rate we had previously calulated. This way we can use as a summary/ verification of our results.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "zkHK",
+      "code_hash": "f4121d0189e0d8711e1fe878a69a1e04",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"8-reading-it-back\">8. Reading It Back</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "UdqX",
+      "code_hash": "28a4747ecb0e654dd3125be8c281e512",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Function 1: Get towns - In: county name Out: list of towns. I asked about params (adds options to the web address so API knows what you are referring to).</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YJaV",
+      "code_hash": "41349c8444d54981418df8d060c971a7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Function 2: Get town history. In: dor code, 2026, Out: record for that year. I asked about lambda (tiny, unnamed function used once)</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "QhuP",
+      "code_hash": "d073d6b8d8e98aad275e1bb7ef883151",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Change/ Prediction: One change in input to function 1 is fiscal year to 2025, predicting both house and tax value are lower than for 2026.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZpWu",
+      "code_hash": "8d718684a404bcfa611c7c42977b8a2a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Town             2026 Value  2025 Value   2026 Bill   2025 Bill\nMalden              434,420     437,415       4,952       4,952\nWaltham             502,825     490,719       5,189       4,819\nDracut              593,296     552,507       5,737       5,591\nLowell              514,854     480,247       5,844       5,513\nEverett             466,504     451,023       5,887       5,137\nAshby               394,983     398,515       6,225       6,069\nMarlborough         611,100     593,345       6,441       5,850\nTownsend            469,723     432,462       6,459       6,279\nShirley             523,807     482,399       6,490       6,257\nAyer                571,644     516,481       6,625       6,177\nBillerica           644,586     632,908       7,484       7,196\nPepperell           549,948     515,054       7,578       7,535\nOut of 12 towns, 10 had a lower average home value in 2025 and 11 had a lower average bill in 2025, compared with 2026.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "vZmC",
+      "code_hash": "b37996cd47ea4ea3e7b5146224c9e863",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">The prediction was mostly right since 10/12 towns had a lower home value and 11/12 had a lower tax value.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "jcSt",
+      "code_hash": "3091aaa72d0ad72b97a2e200f242011e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"9-going-further\">9. Going Further</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ScZr",
+      "code_hash": "871cfd35a39007f3eae3497050e95168",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"10-time-spent\">10. Time Spent</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iEgM",
+      "code_hash": "8789b60ffee84904883350e241160092",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "goya",
+      "code_hash": "aa22996651cbd9f54cb0ff70fdf42114",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "urUO",
+      "code_hash": "8789b60ffee84904883350e241160092",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
