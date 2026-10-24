@@ -1,6 +1,14 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "marimo",
+#     "requests",
+# ]
+# ///
+
 import marimo
 
-__generated_with = "0.24.2"
+__generated_with = "0.25.2"
 app = marimo.App(width="medium")
 
 
@@ -124,7 +132,7 @@ def _(
                 })
 
     sorted_results = sorted(results, key=lambda r: r["average_bill"])
-    return (sorted_results,)
+    return sorted_results, towns
 
 
 @app.cell(hide_code=True)
@@ -221,6 +229,43 @@ def _(mo):
     return
 
 
+@app.cell
+def _(get_town_history, sorted_results, towns):
+    print(f"{'Town':<15}{'2026 Value':>12}{'2025 Value':>12}{'2026 Bill':>12}{'2025 Bill':>12}")
+    value_lower_count = 0
+    bill_lower_count = 0
+    skipped_2025 = 0
+    for _r in sorted_results:
+        for _town in towns:
+            if _town["name"] == _r["town"]:
+                _dor_code = _town["dor_code"]
+        _history_2025 = get_town_history(_dor_code, 2025)
+        if _history_2025 is None:
+            skipped_2025 = skipped_2025 + 1
+        else:
+            _value_2025 = _history_2025["average_single_family_value_dollars"]
+            _bill_2025 = _history_2025["average_single_family_bill_dollars"]
+            print(f"{_r['town']:<15}{_r['average_value']:>12,}{_value_2025:>12,}{_r['average_bill']:>12,}{_bill_2025:>12,}")
+            if _value_2025 < _r["average_value"]:
+                value_lower_count = value_lower_count + 1
+            if _bill_2025 < _r["average_bill"]:
+                bill_lower_count = bill_lower_count + 1
+
+    print(
+        f"Out of {len(sorted_results)} towns, {value_lower_count} had a lower average home value in 2025 "
+        f"and {bill_lower_count} had a lower average bill in 2025, compared with 2026."
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    The prediction was mostly right since 10/12 towns had a lower home value and 11/12 had a lower tax value.
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -229,10 +274,155 @@ def _(mo):
     return
 
 
+@app.cell
+def _(
+    budget_dollars,
+    fiscal_year,
+    get_town_history,
+    get_towns,
+    sorted_results,
+    tax_limit_dollars,
+):
+    norfolk_towns = get_towns("Norfolk")
+
+    norfolk_results = []
+    for _town in norfolk_towns:
+        _history = get_town_history(_town["dor_code"], fiscal_year)
+        if _history is not None:
+            _average_value = _history["average_single_family_value_dollars"]
+            _average_bill = _history["average_single_family_bill_dollars"]
+            if _average_value <= budget_dollars and _average_bill <= tax_limit_dollars:
+                norfolk_results.append({
+                    "town": _town["name"],
+                    "average_value": _average_value,
+                    "tax_rate": _history["residential_rate_per_thousand"],
+                    "average_bill": _average_bill,
+                })
+
+    norfolk_sorted = sorted(norfolk_results, key=lambda r: r["average_bill"])
+
+    print(f"{'Town':<15}{'Average Value':>15}{'Tax Rate':>12}{'Average Bill':>15}")
+    for _r in norfolk_sorted:
+        print(f"{_r['town']:<15}{_r['average_value']:>15,}{_r['tax_rate']:>12}{_r['average_bill']:>15,}")
+
+    print(
+        f"\nOut of {len(norfolk_towns)} towns in Norfolk County, {len(norfolk_sorted)} have an average home "
+        f"under ${budget_dollars:,} and an average tax bill under ${tax_limit_dollars:,}, "
+        f"compared with {len(sorted_results)} towns in Middlesex County."
+    )
+    return (norfolk_sorted,)
+
+
+@app.cell
+def _(
+    budget_dollars,
+    fiscal_year,
+    get_town_history,
+    get_towns,
+    norfolk_sorted,
+    sorted_results,
+    tax_limit_dollars,
+):
+    worcester_towns = get_towns("Worcester")
+
+    worcester_results = []
+    for _town in worcester_towns:
+        _history = get_town_history(_town["dor_code"], fiscal_year)
+        if _history is not None:
+            _average_value = _history["average_single_family_value_dollars"]
+            _average_bill = _history["average_single_family_bill_dollars"]
+            if _average_value <= budget_dollars and _average_bill <= tax_limit_dollars:
+                worcester_results.append({
+                    "town": _town["name"],
+                    "average_value": _average_value,
+                    "tax_rate": _history["residential_rate_per_thousand"],
+                    "average_bill": _average_bill,
+                })
+
+    worcester_sorted = sorted(worcester_results, key=lambda r: r["average_bill"])
+
+    print(f"{'Town':<15}{'Average Value':>15}{'Tax Rate':>12}{'Average Bill':>15}")
+    for _r in worcester_sorted:
+        print(f"{_r['town']:<15}{_r['average_value']:>15,}{_r['tax_rate']:>12}{_r['average_bill']:>15,}")
+
+    print(
+        f"\nOut of {len(worcester_towns)} towns in Worcester County, {len(worcester_sorted)} have an average home "
+        f"under ${budget_dollars:,} and an average tax bill under ${tax_limit_dollars:,}, "
+        f"compared with {len(sorted_results)} towns in Middlesex County and {len(norfolk_sorted)} towns in Norfolk County."
+    )
+    return (worcester_sorted,)
+
+
+@app.cell
+def _(
+    budget_dollars,
+    fiscal_year,
+    get_town_history,
+    get_towns,
+    norfolk_sorted,
+    sorted_results,
+    tax_limit_dollars,
+    worcester_sorted,
+):
+    plymouth_towns = get_towns("Plymouth")
+
+    plymouth_results = []
+    for _town in plymouth_towns:
+        _history = get_town_history(_town["dor_code"], fiscal_year)
+        if _history is not None:
+            _average_value = _history["average_single_family_value_dollars"]
+            _average_bill = _history["average_single_family_bill_dollars"]
+            if _average_value <= budget_dollars and _average_bill <= tax_limit_dollars:
+                plymouth_results.append({
+                    "town": _town["name"],
+                    "average_value": _average_value,
+                    "tax_rate": _history["residential_rate_per_thousand"],
+                    "average_bill": _average_bill,
+                })
+
+    plymouth_sorted = sorted(plymouth_results, key=lambda r: r["average_bill"])
+
+    print(f"{'Town':<15}{'Average Value':>15}{'Tax Rate':>12}{'Average Bill':>15}")
+    for _r in plymouth_sorted:
+        print(f"{_r['town']:<15}{_r['average_value']:>15,}{_r['tax_rate']:>12}{_r['average_bill']:>15,}")
+
+    print(
+        f"\nOut of {len(plymouth_towns)} towns in Plymouth County, {len(plymouth_sorted)} have an average home "
+        f"under ${budget_dollars:,} and an average tax bill under ${tax_limit_dollars:,}, "
+        f"compared with {len(sorted_results)} towns in Middlesex County, {len(norfolk_sorted)} towns in Norfolk County, "
+        f"and {len(worcester_sorted)} towns in Worcester County."
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    Middlesex County offers the fewest affordable options for this couple, with only 12 of 54 towns (22%) meeting the $700,000 home value and $8,000 tax bill limits, while Norfolk is similarly tight at 7 of 28 towns (25%), but Plymouth (16 of 27 towns, 59%) and especially Worcester (46 of 60 towns, 77%) offer far more towns that fit the budget.
+    """)
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     ## 10. Time Spent
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    I am a beginner and have never used python before so every step takes a long time for me. I spent around 6+ hours mostly in the first section where I needed to understand what was being asked and how to frame the approach step by step. I also need to work more efficiently with AI.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+ 
     """)
     return
 
