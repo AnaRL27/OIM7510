@@ -8,7 +8,14 @@
     {
       "id": "Hbol",
       "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -66,13 +73,27 @@
     {
       "id": "PKri",
       "code_hash": "ca2ac0a7aad14823f2bd2758cd901e5e",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "Xref",
       "code_hash": "b9a3dad2977289276ed8dbc74e102af3",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>106.25</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -91,7 +112,14 @@
     {
       "id": "BYtC",
       "code_hash": "c8f862e56b4e11f6d7863336e449abd5",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[\"AAPL\", 100, \"text/plain+float:173.93\"], [\"MSFT\", 50, \"text/plain+float:319.53\"], [\"GOOG\", 80, \"text/plain+float:131.36\"], [\"AMZN\", 200, \"text/plain+float:129.33\"], [\"NVDA\", 20, \"text/plain+float:410.17\"], [\"TSLA\", 150, \"text/plain+float:255.7\"]]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -110,13 +138,27 @@
     {
       "id": "Kclp",
       "code_hash": "5972c5742a2be0f99522ee4be2cdbb74",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "emfo",
       "code_hash": "fbcdd90c11ec2831b00fa6033a5c4c9a",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>116302.7</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -135,13 +177,27 @@
     {
       "id": "nWHF",
       "code_hash": "428b4c0c99c1cdc56d12353697857ed6",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[\"VTI\", 120, \"text/plain+float:228.4\"], [\"BND\", 300, \"text/plain+float:72.15\"], [\"AAPL\", 40, \"text/plain+float:173.93\"]]"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "iLit",
       "code_hash": "f081abd5f16aabef5649ae6239b827c2",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>56010.2</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -171,6 +227,58 @@
       "console": []
     },
     {
+      "id": "xKsp",
+      "code_hash": "dffb131a9dffc59e6008b8cc0054c556",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "eXnM",
+      "code_hash": "4ad300f7ed4a3c97f351be7e1b386aa4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[600, 460]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Rucp",
+      "code_hash": "ae49484ac309a842ae2ffad8c64a6e7b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "GkrD",
+      "code_hash": "c7ae37eea93a791da828858594fcb296",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[\"TSLA\", \"text/plain+float:38355.0\"], [\"VTI\", \"text/plain+float:27408.0\"]]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "qnkX",
       "code_hash": "056a1aa629d6f6d618e4be5ac43dae47",
       "outputs": [
@@ -178,6 +286,52 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"b-without-return\">\u270f\ufe0f B \u00b7 Without <code>return</code></h2>\n<span class=\"paragraph\">Copy <code>count_shares</code> into a new cell under a new name, and put <code>print(...)</code> where the <code>return</code> was. Call it and keep the result in a name. In a markdown cell under it, answer: what does that name hold, and what could the next cell do with it?</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "egeA",
+      "code_hash": "111a6ed3cbc7e112cf7e0ca52d175184",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SPsT",
+      "code_hash": "d3c635792ee0a2888f21993f0891a3e1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "600\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "RPxv",
+      "code_hash": "dd49931486fc334450c77bfba6faf46f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><code>result</code> holds <code>None</code>, not <code>600</code>. The function printed <code>600</code> to the screen, but since it has no <code>return</code> line, Python automatically hands back <code>None</code> to whatever called it. The next cell could not use <code>result</code> for any further math (like <code>result * 2</code>), because there is no real number stored in it \u2014 only <code>None</code>.</span></span>"
           }
         }
       ],
@@ -212,13 +366,27 @@
     {
       "id": "DnEU",
       "code_hash": "8e41e132c0014809fc7c6d99010a66d6",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ulZA",
       "code_hash": "afdea3774b798b782ef68b655c7e9fad",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"source\": \"Massachusetts Department of Revenue, Division of Local Services, Municipal Databank (https://www.mass.gov/info-details/division-of-local-services-municipal-databank)\", \"endpoints\": {\"/ma/towns\": \"Every town with its latest single-family value and bill, 50 to a page. Query: county, name, max_bill, max_value, sort (name, population, income, value, bill), order (asc, desc), page, per_page\", \"/ma/towns/{dor_code}\": \"One town and its latest finances\", \"/ma/towns/{dor_code}/history\": \"Tax rates and single-family bills by fiscal year. Query: from_year, to_year\", \"/ma/counties\": \"The 14 counties, with their number of towns and population\", \"/ma/votes\": \"Override and underride ballot votes. Query: dor_code, from_year, to_year, page, per_page\"}}"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -237,7 +405,14 @@
     {
       "id": "Pvdt",
       "code_hash": "14cde2c50bca4b2639420fbb27ccefe8",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[200, \"https://oim.zhili.dev/ma/towns?county=Norfolk\"]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -256,7 +431,14 @@
     {
       "id": "aLJB",
       "code_hash": "38507227e42cfbedc8c8954016b16b92",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"page\": 1, \"per_page\": 50, \"total\": 28, \"pages\": 1, \"has_next\": false, \"has_prev\": false}"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -275,7 +457,14 @@
     {
       "id": "xXTn",
       "code_hash": "a71705731d61b6a8136fd49323b520cb",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"dor_code\": \"018\", \"name\": \"Avon\", \"county\": \"Norfolk\", \"type\": \"town\", \"area_square_miles\": \"text/plain+float:5.1\", \"founded_year\": 1888, \"population\": 4801, \"income_per_capita_dollars\": 44742, \"equalized_value_dollars\": 1239903800, \"equalized_value_per_capita_dollars\": 258259, \"data_fiscal_year\": 2027, \"average_single_family_value_dollars\": 572492, \"average_single_family_bill_dollars\": 7643, \"finances_fiscal_year\": 2026}"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -294,13 +483,27 @@
     {
       "id": "pHFh",
       "code_hash": "4109b7e974f26a60556ee3f973cb12d3",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "NCOB",
       "code_hash": "887930193010547e7f6c8af54f576e31",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[{\"dor_code\": \"035\", \"name\": \"Boston\", \"county\": \"Suffolk\", \"type\": \"city\", \"area_square_miles\": \"text/plain+float:48.4\", \"founded_year\": 1630, \"population\": 673458, \"income_per_capita_dollars\": 65287, \"equalized_value_dollars\": 241761863000, \"equalized_value_per_capita_dollars\": 358986, \"data_fiscal_year\": 2027, \"average_single_family_value_dollars\": 615084, \"average_single_family_bill_dollars\": 7627, \"finances_fiscal_year\": 2026}, {\"dor_code\": \"057\", \"name\": \"Chelsea\", \"county\": \"Suffolk\", \"type\": \"city\", \"area_square_miles\": \"text/plain+float:2.2\", \"founded_year\": 1739, \"population\": 40245, \"income_per_capita_dollars\": 27806, \"equalized_value_dollars\": 6348238400, \"equalized_value_per_capita_dollars\": 157740, \"data_fiscal_year\": 2027, \"average_single_family_value_dollars\": 367078, \"average_single_family_bill_dollars\": 4214, \"finances_fiscal_year\": 2026}, {\"dor_code\": \"248\", \"name\": \"Revere\", \"county\": \"Suffolk\", \"type\": \"city\", \"area_square_miles\": \"text/plain+float:5.9\", \"founded_year\": 1871, \"population\": 60702, \"income_per_capita_dollars\": 33133, \"equalized_value_dollars\": 12020129000, \"equalized_value_per_capita_dollars\": 198019, \"data_fiscal_year\": 2027, \"average_single_family_value_dollars\": 623461, \"average_single_family_bill_dollars\": 5574, \"finances_fiscal_year\": 2026}, {\"dor_code\": \"346\", \"name\": \"Winthrop\", \"county\": \"Suffolk\", \"type\": \"town\", \"area_square_miles\": \"text/plain+float:2.0\", \"founded_year\": 1852, \"population\": 18739, \"income_per_capita_dollars\": 47434, \"equalized_value_dollars\": 3873447100, \"equalized_value_per_capita_dollars\": 206705, \"data_fiscal_year\": 2027, \"average_single_family_value_dollars\": 744423, \"average_single_family_bill_dollars\": 8293, \"finances_fiscal_year\": 2026}]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -317,6 +520,19 @@
       "console": []
     },
     {
+      "id": "XBQH",
+      "code_hash": "ed143538be67f219d0e073ca2c9c299f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"Dover\", \"Wellesley\", \"Cohasset\", \"Needham\", \"Westwood\"]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "TRpd",
       "code_hash": "2c8b7518589165dd64e0ae0b892da438",
       "outputs": [
@@ -324,6 +540,45 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"d-from-a-name-to-a-history\">\u270f\ufe0f D \u00b7 From a Name to a History</h2>\n<ol>\n<li>Find Wellesley's <code>dor_code</code> with the <code>name</code> parameter of <code>/ma/towns</code>.</li>\n<li>Use it to ask <code>/ma/towns/{dor_code}/history</code> for fiscal year 2026.</li>\n<li>Check the bill a second way: the average value times the tax rate, divided by 1,000.</li>\n</ol>\n<span class=\"paragraph\"><em>Check yourself: <code>317</code>. Then $2,020,758 \u00d7 10.17 / 1,000 = $20,551.11, and the reply's bill is $20,551.</em></span>\n<span class=\"paragraph\"><strong>Going further.</strong> Write <code>town_history(name)</code>, which takes a town's name, makes both requests, and returns the history.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "eLZN",
+      "code_hash": "34dd5a7aeabf480c2cf1727106d2e6a3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"dor_code\": \"317\", \"name\": \"Wellesley\", \"years\": [{\"fiscal_year\": 2026, \"residential_rate_per_thousand\": \"text/plain+float:10.17\", \"commercial_rate_per_thousand\": \"text/plain+float:10.17\", \"single_family_parcels\": 7319, \"average_single_family_value_dollars\": 2020758, \"average_single_family_bill_dollars\": 20551}]}"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bDez",
+      "code_hash": "b25fff41f35520cb54352e704cff7b96",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>20551.10886</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "LoSm",
+      "code_hash": "cef5d272ec356582153e648fc1947879",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;317&#x27;</pre>"
           }
         }
       ],
@@ -345,7 +600,14 @@
     {
       "id": "dNNg",
       "code_hash": "a8af7dc0d3029782a8e02b74a19d0330",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[50, {\"page\": 1, \"per_page\": 50, \"total\": 351, \"pages\": 8, \"has_next\": true, \"has_prev\": false}]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -364,7 +626,14 @@
     {
       "id": "wlCL",
       "code_hash": "c7fc10556c32764f544faf48140c6d25",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[422, {\"detail\": [{\"type\": \"less_than_equal\", \"loc\": [\"query\", \"per_page\"], \"msg\": \"Input should be less than or equal to 100\", \"input\": \"500\", \"ctx\": {\"le\": 100}}]}]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -383,13 +652,27 @@
     {
       "id": "wAgl",
       "code_hash": "6faf21dd04d541a6216521c2c7181fe4",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "rEll",
       "code_hash": "fac3aeaf89e0bdbcc0f9cfba304ef1c5",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"page\": 1, \"per_page\": 100, \"total\": 351, \"pages\": 4, \"has_next\": true, \"has_prev\": false}"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -400,6 +683,32 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"e-every-town\">\u270f\ufe0f E \u00b7 Every town</h2>\n<span class=\"paragraph\">Write <code>get_all_towns()</code>. It reads page 1, takes <code>pages</code> from its <code>pagination</code>, reads the pages after it with <code>range(2, pages + 1)</code>, and returns one list of every town.</span>\n<span class=\"paragraph\"><em>Check yourself: 351 towns, the same number as <code>pagination[\"total\"]</code>. The first is Abington and the last is Yarmouth.</em></span>\n<span class=\"paragraph\">The count you collected against the total the server reports is a check you can run on any API that sends pages.</span>\n<span class=\"paragraph\"><strong>Going further.</strong> Which town has the highest average single-family tax bill in the state, and which the lowest?</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGDy",
+      "code_hash": "2031bdabbd8b249751660f11e02f215f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vomq",
+      "code_hash": "6dd6bee98ab14b57679dd7af4ccf4b9c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[351, \"Abington\", \"Yarmouth\"]"
           }
         }
       ],
@@ -439,6 +748,45 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"f-write-on-the-board\">\u270f\ufe0f F \u00b7 Write on the board</h2>\n<ol>\n<li>Look up a town you know with the <code>name</code> parameter of <code>/ma/towns</code>. Keep its name as <code>town_name</code> and its average single-family bill as <code>town_bill</code>.</li>\n<li>Add a cell with the code below, put your GitHub username in place of the brackets, and run it.</li>\n</ol>\n<div class=\"language-python codehilite\"><pre><span></span><code><span class=\"n\">board_reply</span> <span class=\"o\">=</span> <span class=\"n\">requests</span><span class=\"o\">.</span><span class=\"n\">post</span><span class=\"p\">(</span>\n    <span class=\"s2\">\"https://oim.zhili.dev/message\"</span><span class=\"p\">,</span>\n    <span class=\"n\">headers</span><span class=\"o\">=</span><span class=\"p\">{</span><span class=\"s2\">\"x-token\"</span><span class=\"p\">:</span> <span class=\"s2\">\"&lt;your-github-username&gt;\"</span><span class=\"p\">},</span>\n    <span class=\"n\">json</span><span class=\"o\">=</span><span class=\"p\">{</span><span class=\"s2\">\"message\"</span><span class=\"p\">:</span> <span class=\"sa\">f</span><span class=\"s2\">\"</span><span class=\"si\">{</span><span class=\"n\">town_name</span><span class=\"si\">}</span><span class=\"s2\">: $</span><span class=\"si\">{</span><span class=\"n\">town_bill</span><span class=\"si\">:</span><span class=\"s2\">,</span><span class=\"si\">}</span><span class=\"s2\">\"</span><span class=\"p\">},</span>\n    <span class=\"n\">timeout</span><span class=\"o\">=</span><span class=\"mi\">10</span><span class=\"p\">,</span>\n<span class=\"p\">)</span>\n<span class=\"n\">board_reply</span><span class=\"o\">.</span><span class=\"n\">status_code</span><span class=\"p\">,</span> <span class=\"n\">board_reply</span><span class=\"o\">.</span><span class=\"n\">json</span><span class=\"p\">()</span>\n</code></pre></div>\n<span class=\"paragraph\"><em>Check yourself: </em><em>201</em><em>, which means the server created something, and your town on the board.</em></span>\n<ol start=\"3\">\n<li>Delete the <code>headers=</code> line and run it again. In a markdown cell under it, answer: what did the server answer, and why does it need to know who sent a message?</li>\n</ol>\n<span class=\"paragraph\"><strong>Going further.</strong> Post something more useful than one town's bill: choose a question somebody would ask, answer it from live data, and post the answer, in 140 characters or fewer.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "eFkU",
+      "code_hash": "66d5433b59fddb49d0aa26117dcfb553",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[201, {\"author\": \"Ana R.\", \"message\": \"Hello from Ana\", \"timestamp\": \"2026-10-20T23:48:49.850719+00:00\"}]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "GGoJ",
+      "code_hash": "ec2c9e1e60ef89e9e94edd4846179447",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[401, {\"detail\": \"Missing x-token header\"}]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "knCm",
+      "code_hash": "7df8ae51733f37a3ea519da8d31d103e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Without the <code>x-token</code> header, the server answered <strong>401</strong> with <code>{\"detail\": \"Missing x-token header\"}</code> \u2014 it refused the request outright, rather than posting an anonymous message. The server needs to know who sent a message so it can show the right name on the board next to each line, and so it can tell who to credit (or blame) for what gets posted \u2014 without a header, it has no way to attach a message to a person.</span></span>"
           }
         }
       ],

@@ -8,7 +8,14 @@
     {
       "id": "Hbol",
       "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -66,7 +73,14 @@
     {
       "id": "PKri",
       "code_hash": "3ec179977eb886c2c66062090edededa",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"Symbol\": \"GOOG\", \"Price\": \"text/plain+float:133.1\", \"Currency\": \"USD\"}"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -85,7 +99,14 @@
     {
       "id": "SFPL",
       "code_hash": "eea132fed27efd6f1db408185f7d665e",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>True</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -104,7 +125,14 @@
     {
       "id": "RGSE",
       "code_hash": "d36c2544a9da3d7ca41366697fa9ad45",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>0</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -123,7 +151,14 @@
     {
       "id": "emfo",
       "code_hash": "c6eaa2401b0fa36823b5bb26bdb54aba",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"Symbol: GOOG\", \"Price: 133.1\", \"Currency: USD\"]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -142,17 +177,24 @@
     {
       "id": "nWHF",
       "code_hash": "a098e7088e3366c7409a5de0cd5ca558",
-      "outputs": [],
-      "console": []
-    },
-    {
-      "id": "iLit",
-      "code_hash": "4bb7e4e90ba21fec5bde95058bd65efb",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"your-written-answers\">Your written answers</h3>\n<span class=\"paragraph\">Several questions below ask for a sentence. This cell is where they go. Click into it, write under the letter, and press <code>Ctrl+Enter</code> (Windows) or <code>Cmd+Enter</code> (macOS).</span>\n<span class=\"paragraph\"><strong>B \u00b7</strong> LIST since it can change by adding, removing or reordering</span>\n<span class=\"paragraph\"><strong>C \u00b7</strong> SET since you just need to know who ordered and not the extra details</span>\n<span class=\"paragraph\"><strong>D \u00b7</strong> DICTIONARY since you are looking a product up and do not need to worry about position</span>\n<span class=\"paragraph\"><strong>G \u00b7</strong> TUPLE since it does not change once recorded</span></span>"
+            "application/json": "{\"shipped\": 4, \"pending\": 2, \"cancelled\": 1}"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "93acd19875e4e662e8c4527826e03b74",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"your-written-answers\">Your written answers</h3>\n<span class=\"paragraph\">Several questions below ask for a sentence. This cell is where they go. Click into it, write under the letter, and press <code>Ctrl+Enter</code> (Windows) or <code>Cmd+Enter</code> (macOS).</span>\n<span class=\"paragraph\"><strong>B \u00b7</strong> France had the most orders, with 4.</span>\n<span class=\"paragraph\"><strong>C \u00b7</strong></span>\n<ol>\n<li>LIST since it can change by adding, removing or reordering</li>\n<li>SET since you just need to know who ordered and not the extra details</li>\n<li>DICTIONARY since you are looking a product up and do not need to worry about position</li>\n<li>TUPLE since it does not change once recorded</li>\n</ol>\n<span class=\"paragraph\"><strong>G \u00b7</strong> The first result is in Florida, not Massachusetts. Code that always takes <code>[0]</code> would have silently returned the wrong Babson Park \u2014 the Florida one \u2014 with no error at all, because the API still returned a valid, non-empty result. This shows that a successful reply does not guarantee it is the <em>correct</em> one.</span></span>"
           }
         }
       ],
@@ -174,37 +216,86 @@
     {
       "id": "ROlb",
       "code_hash": "b3baada9d1fcfdd58bb210c538eb3881",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"AAPL\": \"text/plain+float:260.81\", \"NVDA\": \"text/plain+float:186.0\", \"MSFT\": \"text/plain+float:404.88\", \"GOOG\": \"text/plain+float:308.42\"}"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "qnkX",
       "code_hash": "1ac612db125e3b2944b69318890e73bd",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>260.81</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "TqIu",
       "code_hash": "68b2c05c327f302524823762c7ee6234",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "'TSLA'",
+          "traceback": null
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">\"/var/folders/5h/syh5zvz56b97qcsfgts8h9lc0000gn/T/marimo_62859/__marimo__cell_TqIu_.py\"</span>, line <span class=\"m\">1</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">closing_prices</span><span class=\"p\">[</span><span class=\"s2\">\"TSLA\"</span><span class=\"p\">]</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~~~~~~~~~~~^^^^^^^^</span>\n<span class=\"gr\">KeyError</span>: <span class=\"n\">'TSLA'</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
     },
     {
       "id": "Vxnm",
       "code_hash": null,
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "DnEU",
-      "code_hash": "e50dc0f1820fdfb883f7a58688608192",
-      "outputs": [],
+      "code_hash": "086521750e673b986de6c11eecfd933f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"AAPL\", \"MSFT\", \"GOOG\"]"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ulZA",
-      "code_hash": "4adcf3ec5c494d99b87db02a1bf3ce02",
-      "outputs": [],
+      "code_hash": "3951ab3a91133cb44c3cb1624db5b8d2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;MSFT&#x27;</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -223,13 +314,27 @@
     {
       "id": "Pvdt",
       "code_hash": "cf013d266ae6857b91858009b7c8ab48",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>30</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ZBYS",
       "code_hash": "ba3c22115ddd8482f1a3e436371f2f55",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"France\": 4, \"Germany\": 4, \"Brazil\": 4, \"Belgium\": 1, \"Switzerland\": 2, \"Venezuela\": 3, \"Austria\": 3, \"Mexico\": 1, \"USA\": 4, \"Sweden\": 1, \"Finland\": 2, \"Argentina\": 1}"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -248,7 +353,14 @@
     {
       "id": "nHfw",
       "code_hash": "28bb1887819d424fa39aa23560629d78",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"GOOG\", 3]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -280,7 +392,14 @@
     {
       "id": "pHFh",
       "code_hash": "8cb4b4c9b56148cf5915a10cbe0dd092",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;GOOG cost $13,136.00&#x27;</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -312,7 +431,14 @@
     {
       "id": "TRpd",
       "code_hash": "95a3924e5bdeb1262241b6861ecbb4f2",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[20, 10]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -331,7 +457,14 @@
     {
       "id": "dNNg",
       "code_hash": "f01f1fda7f571e14bf2a6509ace69186",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;Independence Day&#x27;</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -350,7 +483,14 @@
     {
       "id": "wlCL",
       "code_hash": "3ec454296bb0dc1ab5b1eba9bb86ad77",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[7, 4, [\"AAPL\", \"GOOG\", \"MSFT\", \"TSLA\"]]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -382,7 +522,14 @@
     {
       "id": "rEll",
       "code_hash": "fd30a3b2532bb06bb2b05ca93f53b70c",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[\"AAPL\", \"GOOG\", \"MSFT\", \"TSLA\"], [\"AMZN\", \"NVDA\"]]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -427,7 +574,14 @@
     {
       "id": "yOPj",
       "code_hash": null,
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -459,13 +613,27 @@
     {
       "id": "urSm",
       "code_hash": "7260cbebb9fdbc354c6972a37a0fc139",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>116302.7</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "jxvo",
       "code_hash": "c8f862e56b4e11f6d7863336e449abd5",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[\"AAPL\", 100, \"text/plain+float:173.93\"], [\"MSFT\", 50, \"text/plain+float:319.53\"], [\"GOOG\", 80, \"text/plain+float:131.36\"], [\"AMZN\", 200, \"text/plain+float:129.33\"], [\"NVDA\", 20, \"text/plain+float:410.17\"], [\"TSLA\", 150, \"text/plain+float:255.7\"]]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -497,31 +665,66 @@
     {
       "id": "YWSi",
       "code_hash": "fa923984c3255ec447f3c2f9d1ae94e5",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[[\"2026-01-05\", \"AAPL\", \"buy\", 100, \"text/plain+float:180.0\"], [\"2026-02-10\", \"MSFT\", \"buy\", 40, \"text/plain+float:400.0\"], [\"2026-03-02\", \"AAPL\", \"buy\", 50, \"text/plain+float:210.0\"], [\"2026-04-15\", \"AAPL\", \"sell\", 120, \"text/plain+float:230.0\"], [\"2026-05-20\", \"MSFT\", \"buy\", 20, \"text/plain+float:380.0\"], [\"2026-06-08\", \"MSFT\", \"sell\", 50, \"text/plain+float:420.0\"], [\"2026-07-01\", \"AAPL\", \"buy\", 30, \"text/plain+float:240.0\"], [\"2026-08-12\", \"AAPL\", \"sell\", 40, \"text/plain+float:250.0\"]]"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "zlud",
       "code_hash": "7fa7d61f81c98f8da1b4071bb2e1d760",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "tZnO",
       "code_hash": "8042235223fd1f3f0bf67e31531eeaff",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>7900.0</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "xvXZ",
       "code_hash": "543b0fb09848e4023df389b75fb2d810",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"AAPL\": \"text/plain+float:6700.0\", \"MSFT\": \"text/plain+float:1200.0\"}"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "CLip",
       "code_hash": "f8c77c3bee0bd5d27b9ca0e20c216d1a",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"AAPL\": [[20, \"text/plain+float:240.0\"]], \"MSFT\": [[10, \"text/plain+float:380.0\"]]}"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -540,7 +743,14 @@
     {
       "id": "cEAS",
       "code_hash": "8e41e132c0014809fc7c6d99010a66d6",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -559,7 +769,14 @@
     {
       "id": "EJmg",
       "code_hash": "b0a00ff4650826e66e32fe0666f52a91",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>200</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -578,7 +795,14 @@
     {
       "id": "vEBW",
       "code_hash": "25e9c1190b53d7f608172bbf33825be4",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"latitude\": \"text/plain+float:42.299843\", \"longitude\": \"text/plain+float:-71.27756\", \"generationtime_ms\": \"text/plain+float:0.04029273986816406\", \"utc_offset_seconds\": -14400, \"timezone\": \"America/New_York\", \"timezone_abbreviation\": \"GMT-4\", \"elevation\": \"text/plain+float:49.0\", \"current_units\": {\"time\": \"iso8601\", \"interval\": \"seconds\", \"temperature_2m\": \"\\u00b0F\", \"wind_speed_10m\": \"mp/h\"}, \"current\": {\"time\": \"2026-10-22T17:45\", \"interval\": 900, \"temperature_2m\": \"text/plain+float:58.6\", \"wind_speed_10m\": \"text/plain+float:5.2\"}}"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -597,7 +821,14 @@
     {
       "id": "IpqN",
       "code_hash": "11b5f79650a5781c25cfe837407d6333",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>58.6</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -629,7 +860,14 @@
     {
       "id": "TTti",
       "code_hash": "80c6a8567fd12b007ce7e420740ff83e",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[400, {\"error\": true, \"reason\": \"Latitude must be in range of -90 to 90\\u00b0. Given: 422.0.\"}]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -648,7 +886,14 @@
     {
       "id": "IaQp",
       "code_hash": "5bd422ed104db59bf08fcd74f9c7c304",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[200, {\"generationtime_ms\": \"text/plain+float:0.106692314\"}]"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -667,7 +912,14 @@
     {
       "id": "fCoF",
       "code_hash": "9e24f0f5b2cd162f0e0a7f9d94eefd0c",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>True</pre>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -697,6 +949,19 @@
       "console": []
     },
     {
+      "id": "KlOr",
+      "code_hash": "4bcbabe272a8fde6f93496585664edec",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;The wind speed is 5.2 mp/h.&#x27;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "woaO",
       "code_hash": "ad89aa8c2d83a0b134f6b703f4e3576d",
       "outputs": [
@@ -710,6 +975,45 @@
       "console": []
     },
     {
+      "id": "qWky",
+      "code_hash": "fcd1a7538ace3aa966b4e7e9ea75fb3a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[200, {\"results\": [{\"id\": 4954738, \"name\": \"Wellesley\", \"latitude\": \"text/plain+float:42.29649\", \"longitude\": \"text/plain+float:-71.29256\", \"elevation\": \"text/plain+float:38.0\", \"feature_code\": \"PPL\", \"country_code\": \"US\", \"admin1_id\": 6254926, \"admin2_id\": 4945455, \"admin3_id\": 4954762, \"timezone\": \"America/New_York\", \"population\": 27982, \"postcodes\": [\"02482\"], \"country_id\": 6252001, \"country\": \"United States\", \"admin1\": \"Massachusetts\", \"admin2\": \"Norfolk\", \"admin3\": \"Town of Wellesley\"}], \"generationtime_ms\": \"text/plain+float:0.15425682\"}]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "pcIO",
+      "code_hash": "1a48a607eb3ef2523dcfceec50c8654e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"id\": 4954738, \"name\": \"Wellesley\", \"latitude\": \"text/plain+float:42.29649\", \"longitude\": \"text/plain+float:-71.29256\", \"elevation\": \"text/plain+float:38.0\", \"feature_code\": \"PPL\", \"country_code\": \"US\", \"admin1_id\": 6254926, \"admin2_id\": 4945455, \"admin3_id\": 4954762, \"timezone\": \"America/New_York\", \"population\": 27982, \"postcodes\": [\"02482\"], \"country_id\": 6252001, \"country\": \"United States\", \"admin1\": \"Massachusetts\", \"admin2\": \"Norfolk\", \"admin3\": \"Town of Wellesley\"}"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nZgp",
+      "code_hash": "39b9bc1f41ea1b99a32eaf280b8b1614",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"text/plain+float:42.29649\", \"text/plain+float:-71.29256\", \"Massachusetts\"]"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "HnMC",
       "code_hash": "21d3ca8f95327f43ccfb133da060a48a",
       "outputs": [
@@ -717,6 +1021,32 @@
           "type": "data",
           "data": {
             "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong>G \u00b7 The first result.</strong> Search for <code>Babson Park</code> and look at the first place in <code>results</code>. In the written answers cell, answer under <strong>G</strong>: which state is it in, and what would code that always takes <code>[0]</code> have done with it?</span>\n<span class=\"paragraph\"><strong>Going further.</strong> Use F's coordinates to ask for Wellesley's current temperature. Build the address with an f-string, so that changing the town changes the forecast.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "XkYo",
+      "code_hash": "06dd4d9d7182e9306203dc9cb8d37257",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "{\"id\": 4146481, \"name\": \"Babson Park\", \"latitude\": \"text/plain+float:27.83197\", \"longitude\": \"text/plain+float:-81.5223\", \"elevation\": \"text/plain+float:44.0\", \"feature_code\": \"PPL\", \"country_code\": \"US\", \"admin1_id\": 4155751, \"admin2_id\": 4168988, \"timezone\": \"America/New_York\", \"population\": 1356, \"postcodes\": [\"33827\"], \"country_id\": 6252001, \"country\": \"United States\", \"admin1\": \"Florida\", \"admin2\": \"Polk\"}"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MoEb",
+      "code_hash": "8f8cedb996edd3253c269bb7570d0fc1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[{\"id\": 4146481, \"name\": \"Babson Park\", \"latitude\": \"text/plain+float:27.83197\", \"longitude\": \"text/plain+float:-81.5223\", \"elevation\": \"text/plain+float:44.0\", \"feature_code\": \"PPL\", \"country_code\": \"US\", \"admin1_id\": 4155751, \"admin2_id\": 4168988, \"timezone\": \"America/New_York\", \"population\": 1356, \"postcodes\": [\"33827\"], \"country_id\": 6252001, \"country\": \"United States\", \"admin1\": \"Florida\", \"admin2\": \"Polk\"}, {\"id\": 4929521, \"name\": \"Babson Park\", \"latitude\": \"text/plain+float:42.29871\", \"longitude\": \"text/plain+float:-71.2595\", \"elevation\": \"text/plain+float:47.0\", \"feature_code\": \"PPL\", \"country_code\": \"US\", \"admin1_id\": 6254926, \"admin2_id\": 4945455, \"admin3_id\": 4954762, \"timezone\": \"America/New_York\", \"postcodes\": [\"02457\"], \"country_id\": 6252001, \"country\": \"United States\", \"admin1\": \"Massachusetts\", \"admin2\": \"Norfolk\", \"admin3\": \"Town of Wellesley\"}]"
           }
         }
       ],
