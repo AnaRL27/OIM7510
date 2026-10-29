@@ -8,7 +8,7 @@
 
 import marimo
 
-__generated_with = "0.25.2"
+__generated_with = "0.24.2"
 app = marimo.App(width="medium")
 
 
@@ -67,7 +67,11 @@ def _(mo):
 
 
 @app.cell
-def _(requests):
+def _(csv, os, requests):
+    data_folder = "projects/mp2/data"
+    os.makedirs(data_folder, exist_ok=True)
+
+
     def get_towns(county):
         towns = []
         page_number = 1
@@ -88,12 +92,26 @@ def _(requests):
             data = response.json()
             for _item in data["items"]:
                 towns.append(_item)
+
+        with open(f"{data_folder}/towns_{county}.csv", "w", newline="") as _file:
+            _writer = csv.DictWriter(_file, fieldnames=towns[0].keys())
+            _writer.writeheader()
+            for _town in towns:
+                _writer.writerow(_town)
+
         return towns
 
 
     def get_town_history(dor_code, year):
         response = requests.get(f"https://oim.zhili.dev/ma/towns/{dor_code}/history")
         data = response.json()
+
+        with open(f"{data_folder}/history_{dor_code}.csv", "w", newline="") as _file:
+            _writer = csv.DictWriter(_file, fieldnames=data["years"][0].keys())
+            _writer.writeheader()
+            for _year_record in data["years"]:
+                _writer.writerow(_year_record)
+
         for _year_record in data["years"]:
             if _year_record["fiscal_year"] == year:
                 return _year_record
@@ -429,10 +447,13 @@ def _(mo):
 
 @app.cell
 def _():
+    import csv
+    import os
+
     import marimo as mo
     import requests
 
-    return mo, requests
+    return csv, mo, os, requests
 
 
 @app.cell(hide_code=True)

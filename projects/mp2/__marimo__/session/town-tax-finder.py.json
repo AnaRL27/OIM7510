@@ -1,7 +1,7 @@
 {
   "version": "1",
   "metadata": {
-    "marimo_version": "0.25.2",
+    "marimo_version": "0.24.2",
     "script_metadata_hash": "d848f9de174660e41a371f5f58ae3c23"
   },
   "cells": [
@@ -65,7 +65,7 @@
     },
     {
       "id": "PKri",
-      "code_hash": "e64d449e7f0b280cff743d00d8a08091",
+      "code_hash": "494d714e8034b7d9eb3167fe737861ba",
       "outputs": [],
       "console": []
     },
@@ -301,7 +301,7 @@
     },
     {
       "id": "AjVT",
-      "code_hash": "aa22996651cbd9f54cb0ff70fdf42114",
+      "code_hash": "6719bfc04663ef60b82ffb5810ccb299",
       "outputs": [],
       "console": []
     },
