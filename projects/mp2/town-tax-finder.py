@@ -12,6 +12,17 @@ __generated_with = "0.24.2"
 app = marimo.App(width="medium")
 
 
+@app.cell
+def _():
+    import csv
+    import os
+
+    import marimo as mo
+    import requests
+
+    return csv, mo, requests
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -67,7 +78,10 @@ def _(mo):
 
 
 @app.cell
-def _(csv, os, requests):
+def _(csv, requests):
+    import os
+
+
     data_folder = "projects/mp2/data"
     os.makedirs(data_folder, exist_ok=True)
 
@@ -234,7 +248,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Function 2: Get town history. In: dor code, 2026, Out: record for that year. I asked about lambda (tiny, unnamed function used once)
+    Function 2: Get town history. In: dor code, 2026, Out: record for that year. I asked about Get function (retrieves data you ask for and returns it back, hiding the work behind the scenes bringing back the information requested).
     """)
     return
 
@@ -443,17 +457,6 @@ def _(mo):
  
     """)
     return
-
-
-@app.cell
-def _():
-    import csv
-    import os
-
-    import marimo as mo
-    import requests
-
-    return csv, mo, os, requests
 
 
 @app.cell(hide_code=True)

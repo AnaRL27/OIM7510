@@ -6,6 +6,19 @@
   },
   "cells": [
     {
+      "id": "AjVT",
+      "code_hash": "6719bfc04663ef60b82ffb5810ccb299",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
       "id": "Hbol",
       "code_hash": "8474f74b034fc7eb408b345ee9436160",
       "outputs": [
@@ -173,12 +186,12 @@
     },
     {
       "id": "ROlb",
-      "code_hash": "41349c8444d54981418df8d060c971a7",
+      "code_hash": "8637a3678bf0c714048b4e728341d804",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Function 2: Get town history. In: dor code, 2026, Out: record for that year. I asked about lambda (tiny, unnamed function used once)</span></span>"
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Function 2: Get town history. In: dor code, 2026, Out: record for that year. I asked about Get function (retrieves data you ask for and returns it back, hiding the work behind the scenes bringing back the information requested).</span></span>"
           }
         }
       ],
@@ -297,12 +310,6 @@
           }
         }
       ],
-      "console": []
-    },
-    {
-      "id": "AjVT",
-      "code_hash": "6719bfc04663ef60b82ffb5810ccb299",
-      "outputs": [],
       "console": []
     },
     {
