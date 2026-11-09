@@ -1,0 +1,13 @@
+asset_id,name,type,sector
+1,Apple Inc,stock,Technology
+2,Microsoft Corp,stock,Technology
+3,Amazon.com Inc,stock,Consumer Discretionary
+4,Alphabet Inc,stock,Technology
+5,Tesla Inc,stock,Consumer Discretionary
+6,JPMorgan Chase,stock,Financials
+7,Exxon Mobil,stock,Energy
+8,SPDR S&P 500 ETF,ETF,Diversified
+9,Invesco QQQ ETF,ETF,Diversified
+10,Bitcoin,crypto,
+11,Ethereum,crypto,
+12,Northstar Media,stock,Communication Services

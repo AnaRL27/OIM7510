@@ -68,4 +68,10 @@ erDiagram
 
 ## 4. Design Choices
 
-*(filled in after the build — see below)*
+**The key I chose.** I used `member_id` instead of `school_email`, and `asset_id` instead of the ticker, because a school email can change after somebody graduates and a ticker can change or get reused, while an ID I invent stays the same for as long as the row exists. The ticker itself lives in `asset_tickers`, one row per ticker an asset has used.
+
+**Optional relationships.** A new member may not have a portfolio yet, a new portfolio may not have traded yet, and an asset may be followed, with prices recorded, but never traded. None of these are mistakes — the scenario allows all three, so a row with nothing attached is a real answer.
+
+**The rule the tables can't hold.** A portfolio can't sell more than it holds. I check it with a query that sums buys minus sells per portfolio and asset, and looks for anything below zero.
+
+**What I changed from the agent's first try.** I asked the agent to change `quantity` for crypto trades to be a decimal instead of a whole number, since crypto is bought and sold in fractions.

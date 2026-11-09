@@ -1,0 +1,16 @@
+portfolio_id,member_id,name,created_date,strategy
+1,1,Tech Bets,2026-09-09,Index Tracking
+2,2,Growth Fund,2025-09-08,Growth
+3,3,Dividend Picks,2026-01-07,Index Tracking
+4,4,Core Holdings,2026-08-01,Growth
+5,5,Growth Fund,2026-05-13,Index Tracking
+6,5,Side Book,2026-02-05,
+7,6,Growth Fund,2024-02-25,Value
+8,7,Growth Fund,2026-08-05,Value
+9,8,Core Holdings,2025-05-14,Income
+10,9,Tech Bets,2026-01-10,Index Tracking
+11,10,Dividend Picks,2026-09-28,Growth
+12,11,Side Book,2026-08-06,Value
+13,12,Core Holdings,2026-02-13,Index Tracking
+14,13,Dividend Picks,2024-04-07,Value
+15,14,Dividend Picks,2026-03-30,Index Tracking
