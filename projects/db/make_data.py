@@ -200,8 +200,8 @@ for portfolio in portfolios:
     portfolio_id, member_id, _, created_date, _ = portfolio
     num_trades = random.randint(12, 20)
     attempts = 0
-    made = 0
-    while made < num_trades and attempts < num_trades * 5:
+    candidates = []  # (asset_id, trade_date), not yet given a side or quantity
+    while len(candidates) < num_trades and attempts < num_trades * 5:
         attempts += 1
         asset_id = random.choice(tradeable_asset_ids)
         price_dates = asset_price_dates[asset_id]
@@ -215,7 +215,14 @@ for portfolio in portfolios:
         combo = (portfolio_id, asset_id, trade_date)
         if combo in used_combos:
             continue
+        used_combos.add(combo)
+        candidates.append((asset_id, trade_date))
 
+    # decide buy/sell in calendar order, so a sell never lands on an earlier
+    # date than the buy that was meant to cover it
+    candidates.sort(key=lambda c: c[1])
+
+    for asset_id, trade_date in candidates:
         held = holdings.get((portfolio_id, asset_id), 0)
         if held == 0:
             side = "buy"
@@ -242,7 +249,6 @@ for portfolio in portfolios:
             fee = round(random.uniform(1.0, 10.0), 2)
 
         trades.append([trade_id, portfolio_id, asset_id, trade_date, side, quantity, price, fee])
-        used_combos.add(combo)
 
         if side == "buy":
             holdings[(portfolio_id, asset_id)] = held + quantity
@@ -250,7 +256,6 @@ for portfolio in portfolios:
             holdings[(portfolio_id, asset_id)] = held - quantity
 
         trade_id += 1
-        made += 1
 
 # Force exactly two trades that oversell: a portfolio sells more units
 # of an asset than it holds. This breaks the rule "a portfolio never

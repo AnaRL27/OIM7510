@@ -169,7 +169,7 @@ def _(mo):
     mo.md(r"""
     ## 2. The Data
 
-    `make_data.py` writes the six CSV files with a fixed random seed, so it writes the same data every time. It breaks one rule on purpose, in exactly two trades: a portfolio sells more units of an asset than it holds at that point. Those two trades are `trade_id` 243 and 244, printed by the script when it runs. It also leaves one member, Priya, with no portfolio, and one asset, Exxon Mobil (`asset_id` 7), never traded, so the questions about rows with nothing attached have an answer.
+    `make_data.py` writes the six CSV files with a fixed random seed, so it writes the same data every time. It breaks one rule on purpose, in exactly two trades: a portfolio sells more units of an asset than it holds at that point. Those two trades are `trade_id` 237 and 238, printed by the script when it runs. It also leaves one member, Priya, with no portfolio, and one asset, Exxon Mobil (`asset_id` 7), never traded, so the questions about rows with nothing attached have an answer.
     """)
     return
 
@@ -276,11 +276,11 @@ def _(ask):
 
 @app.cell
 def _(ask):
-    # expected: the two trades that oversell are trade_id 252 and 253
+    # expected: the two trades that oversell are trade_id 237 and 238
     ask("""
         SELECT t.trade_id, t.portfolio_id, t.asset_id, t.trade_date, t.quantity
         FROM trades t
-        WHERE t.trade_id IN (252, 253)
+        WHERE t.trade_id IN (237, 238)
     """)
     return
 
